@@ -2,9 +2,8 @@
  * Created by mitya on 8/23/16.
  */
 import React, {Component, PropTypes} from 'react';
-import {Card, CardMedia, CardTitle, CardText, CardActions} from 'react-toolbox/lib/card';
+import {Card} from 'react-toolbox/lib/card';
 import {CardActionsRight} from 'react-toolbox-addons/lib/cardactionsright';
-import {Button, IconButton} from 'react-toolbox/lib/button';
 import Dropdown from 'react-toolbox/lib/dropdown';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
 import Input from 'react-toolbox/lib/input';
@@ -13,6 +12,7 @@ class VGComponentForm extends Component {
     static propTypes = {
         dropdowns: PropTypes.arrayOf(PropTypes.shape({
             label: PropTypes.string,
+            name: PropTypes.string,
             onChange: PropTypes.func,
             source: PropTypes.array
         })),
@@ -22,9 +22,27 @@ class VGComponentForm extends Component {
             onChange: PropTypes.func,
             type: PropTypes.string,
             value: PropTypes.string
+        })),
+        textareas: PropTypes.arrayOf(PropTypes.shape({
+            label: PropTypes.string,
+            name: PropTypes.string,
+            onChange: PropTypes.func,
+            value: PropTypes.string
         }))
 
     };
+
+    constructor (props) {
+        super(props);
+        const dropdowns = this.props.dropdowns || [];
+        const inputs = this.props.inputs || [];
+        const textareas = this.props.textareas || [];
+
+        this.state = [...dropdowns, ...inputs, ...textareas].reduce((_state, item)=> {
+            _state[item.name] = item.value;
+            return _state;
+        }, {});
+    }
 
     render () {
         return (
@@ -44,32 +62,36 @@ class VGComponentForm extends Component {
                     <Dropdown
                         auto
                         label={dropdown.label}
-                        onChange={dropdown.onChange}
+                        onChange={(val)=>this.setState({[dropdown.name]: val}, ()=>dropdown.onChange(val))}
                         source={dropdown.source}
-                        value={dropdown.value}
+                        value={this.state[dropdown.name]}
                     />
                 </Col>
             );
-
-        });
+        }, this);
     }
 
     renderInputs (inputs) {
         return inputs.map((_input)=> {
-            const {label, name, value, onChange, type, ...other} = _input;
+            const {label, name, type, onChange, value, ...other} = _input;
+
             return (
                 <Col key={label} medium={6} small={12}>
                     <Input
                         label={label}
                         name={name}
-                        onChange={onChange} {...other}
+                        onChange={(val)=>{
+                        this.setState({[name]: val}, ()=>{
+                            console.log(this.state[name]);
+                        });
+                        }}
                         type={type}
-                        value={value}
+                        value={this.state[name]}
+                        {...other}
                     />
                 </Col>
             );
-
-        });
+        }, this);
     }
 }
 
