@@ -2,7 +2,7 @@
  * Created by lenka on 23/08/2016.
  */
 import React, {Component} from 'react';
-import VGComponentForm from '../../components/vgcomponentform';
+import VGComponentForm from '../../components/vgcomponentform/index';
 
 class HardwareForm extends Component {
 
@@ -53,6 +53,21 @@ class HardwareForm extends Component {
         };
         this.dropdowns = [dd1, dd2, dd3];
         this.inputs = [inp];
+
+        const btn1 = {
+            label: 'Cancel',
+            onClick: ()=> {
+                console.log('cancelled');
+            }
+        };
+        const btn2 = {
+            label: 'Finish',
+            primary: true,
+            onClick: ()=> {
+                console.log('cancelled');
+            }
+        };
+        this.buttons = [btn1, btn2];
     }
 
 
@@ -60,7 +75,9 @@ class HardwareForm extends Component {
         return (
             <VGComponentForm
                 dropdowns={this.dropdowns}
-                inputs={this.inputs}/>
+                inputs={this.inputs}
+                buttons={this.buttons}
+            />
         );
     }
 }

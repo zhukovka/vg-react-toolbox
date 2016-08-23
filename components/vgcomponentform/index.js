@@ -2,8 +2,9 @@
  * Created by mitya on 8/23/16.
  */
 import React, {Component, PropTypes} from 'react';
-import {Card} from 'react-toolbox/lib/card';
+import {Card, CardMedia, CardTitle, CardText, CardActions} from 'react-toolbox/lib/card';
 import {CardActionsRight} from 'react-toolbox-addons/lib/cardactionsright';
+import {Button, IconButton} from 'react-toolbox/lib/button';
 import Dropdown from 'react-toolbox/lib/dropdown';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
 import Input from 'react-toolbox/lib/input';
@@ -28,7 +29,29 @@ class VGComponentForm extends Component {
             name: PropTypes.string,
             onChange: PropTypes.func,
             value: PropTypes.string
-        }))
+        })),
+        buttons: PropTypes.arrayOf(PropTypes.shape({
+                accent: PropTypes.bool,
+                children: PropTypes.node,
+                className: PropTypes.string,
+                disabled: PropTypes.bool,
+                flat: PropTypes.bool,
+                floating: PropTypes.bool,
+                href: PropTypes.string,
+                icon: PropTypes.oneOfType([
+                    PropTypes.string,
+                    PropTypes.element
+                ]),
+                inverse: PropTypes.bool,
+                label: PropTypes.string,
+                mini: PropTypes.bool,
+                neutral: PropTypes.bool,
+                onMouseLeave: PropTypes.func,
+                onMouseUp: PropTypes.func,
+                primary: PropTypes.bool,
+                raised: PropTypes.bool
+            })
+        )
 
     };
 
@@ -51,6 +74,9 @@ class VGComponentForm extends Component {
                     {this.renderDropDowns(this.props.dropdowns)}
                     {this.renderInputs(this.props.inputs)}
                 </Row>
+                <CardActionsRight>
+                    {this.renderCardActionsRight(this.props.buttons)}
+                </CardActionsRight>
             </Card>
         );
     }
@@ -92,6 +118,14 @@ class VGComponentForm extends Component {
                 </Col>
             );
         }, this);
+    }
+
+    renderCardActionsRight (buttons = []) {
+        return buttons.map((button)=> {
+            return (
+                <Button {...button}/>
+            );
+        });
     }
 }
 
