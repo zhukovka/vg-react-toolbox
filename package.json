@@ -2,7 +2,7 @@
   "name": "vg-react-toolbox",
   "description": "react toolbox components for VG",
   "homepage": "https://github.com/zhukovka/vg-react-toolbox#readme",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "./lib",
   "author": "",
   "repository": {
@@ -91,8 +91,8 @@
     "start": "cross-env NODE_ENV=development UV_THREADPOOL_SIZE=100 node ./server",
     "test": "cross-env NODE_ENV=test karma start",
     "test:watch": "cross-env NODE_ENV=test karma start --no-single-run",
-    "tsd": "cpx './components/**/*.d.ts' ./lib",
-    "tsc": "tsc ./components/classes/*.ts --outDir ./lib/classes/"
+    "tsc": "tsc ./components/classes/*.ts --outDir ./lib/classes/",
+    "tsd": "cpx './components/**/*.d.ts' ./lib"
   },
   "license": "ISC"
 }
