@@ -1,11 +1,8 @@
-import React, {Component, PropTypes} from 'react';
+import React, {PropTypes} from 'react';
 import VGComponentForm from '../vgcomponentform';
 import {Card} from 'react-toolbox/lib/card';
 import {CardActionsRight} from 'react-toolbox-addons/lib/cardactionsright';
-import {Button} from 'react-toolbox/lib/button';
-import DropdownPlus from 'react-toolbox-addons/lib/dropdownplus';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
-import Input from 'react-toolbox/lib/input';
 import MainInfo from '../../classes/MainInfo.ts';
 
 class OrgFormMain extends VGComponentForm {
