@@ -1,6 +1,6 @@
 import {DropdownPlusProps} from "../dropdowns";
 import {InputProps} from "../input";
-class HardWare {
+class HardwareFields {
     type:DropdownPlusProps;
     manufacturer:DropdownPlusProps;
     model:DropdownPlusProps;
@@ -14,4 +14,4 @@ class HardWare {
     }
 }
 
-export default HardWare;
+export default HardwareFields;

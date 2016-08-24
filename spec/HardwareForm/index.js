@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import HardWareForm from '../../components/hardwareform/HardWareForm';
-import HardWare from '../../components/classes/HardWare.ts';
+import HardwareFields from '../../components/classes/HardwareFields.ts';
 import FormActions from '../../components/classes/FormActions.ts';
 class HardwareFormTest extends Component {
 
@@ -74,7 +74,7 @@ class HardwareFormTest extends Component {
             }
         };
         this.actions = new FormActions(cancel, finish);
-        this.hardware = new HardWare(type, manufacturer, model, uid);
+        this.hardware = new HardwareFields(type, manufacturer, model, uid);
     }
 
 

@@ -3,13 +3,13 @@ import VGComponentForm from '../vgcomponentform';
 import {CardActionsRight} from 'react-toolbox-addons/lib/cardactionsright';
 import {Button} from 'react-toolbox/lib/button';
 import {Row} from 'react-toolbox-addons/lib/grid';
-import HardWare from '../classes/HardWare';
+import HardwareFields from '../classes/HardwareFields';
 import FormActions from '../classes/FormActions';
 
 class HardWareForm extends VGComponentForm {
     static propTypes = {
         hardwareActions: PropTypes.instanceOf(FormActions),
-        info: PropTypes.instanceOf(HardWare)
+        info: PropTypes.instanceOf(HardwareFields)
     };
 
     constructor (props) {
