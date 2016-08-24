@@ -1,6 +1,3 @@
-/**
- * Created by lenka on 23/08/2016.
- */
 import React, {Component} from 'react';
 import VGComponentForm from '../../components/vgcomponentform/index';
 
