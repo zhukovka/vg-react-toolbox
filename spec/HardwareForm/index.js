@@ -13,7 +13,7 @@ class HardwareForm extends Component {
             name: 'uid',
             key: 'uid-input',
             onChange (val){
-                console.log('kuku');
+                console.log(val);
             },
             type: 'text',
             value: '67676'
@@ -26,8 +26,7 @@ class HardwareForm extends Component {
             value: 'EN-gb',
             source: sources,
             onChange (val){
-                console.log(val, 'KUU');
-                this.value = val;
+                console.log(val);
             }
         };
 
@@ -38,8 +37,11 @@ class HardwareForm extends Component {
             label: 'manufacturers',
             value: 'ES-es',
             source: sources,
+            onAddAnother (){
+                console.log('kukuruku');
+            },
             onChange (val){
-                this.value = val;
+                console.log(val);
             }
         };
         const dd3 = {
@@ -49,7 +51,7 @@ class HardwareForm extends Component {
             value: 'TH-th',
             source: sources,
             onChange (val){
-                this.value = val;
+                console.log(val);
             }
         };
         this.dropdowns = [dd1, dd2, dd3];
@@ -67,7 +69,7 @@ class HardwareForm extends Component {
             label: 'Finish',
             primary: true,
             onClick: ()=> {
-                console.log('cancelled');
+                console.log('finished');
             }
         };
         this.buttons = [btn1, btn2];

@@ -5,7 +5,7 @@ import React, {Component, PropTypes} from 'react';
 import {Card} from 'react-toolbox/lib/card';
 import {CardActionsRight} from 'react-toolbox-addons/lib/cardactionsright';
 import {Button} from 'react-toolbox/lib/button';
-import Dropdown from 'react-toolbox/lib/dropdown';
+import DropdownPlus from 'react-toolbox-addons/lib/dropdownplus';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
 import Input from 'react-toolbox/lib/input';
 
@@ -58,6 +58,7 @@ class VGComponentForm extends Component {
             key: PropTypes.string.isRequired,
             label: PropTypes.string,
             name: PropTypes.string,
+            onAddAnother: PropTypes.func,
             onBlur: PropTypes.func,
             onChange: PropTypes.func,
             onFocus: PropTypes.func,
@@ -150,7 +151,7 @@ class VGComponentForm extends Component {
             const {key, onChange, value, ...other} = dropdown;
             return (
                 <Col key={`col-${key}`} medium={6} small={12}>
-                    <Dropdown
+                    <DropdownPlus
                         onChange={(val)=>this.setState({[key]: val}, ()=>onChange(val))}
                         value={this.state[key]}
                         {...other}
