@@ -121,6 +121,7 @@ class VGComponentForm extends Component {
             type: React.PropTypes.string,
             value: React.PropTypes.any
         })),
+        onSubmit: PropTypes.func,
         textareas: PropTypes.arrayOf(PropTypes.shape({
             key: PropTypes.string.isRequired,
             label: PropTypes.string,
@@ -189,9 +190,9 @@ class VGComponentForm extends Component {
         });
     }
 
-    render () {
+    renderFormContent () {
         return (
-            <Card>
+            <fieldset>
                 <Row expanded>
                     {this.renderDropDowns(this.props.dropdowns)}
                     {this.renderInputs(this.props.inputs)}
@@ -199,9 +200,21 @@ class VGComponentForm extends Component {
                 <CardActionsRight>
                     {this.renderCardActionsRight(this.props.buttons)}
                 </CardActionsRight>
+            </fieldset>
+        );
+    }
+
+    render () {
+        return (
+            <Card>
+                <form action="" onSubmit={this.props.onSubmit}>
+                    {this.renderFormContent()}
+                </form>
             </Card>
         );
     }
+
+
 }
 
 export default VGComponentForm;
