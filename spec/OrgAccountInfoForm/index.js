@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import OrgAccountInfoForm from '../../components/organizationforms/OrgAccountInfoForm';
-import AccountInfo from '../../classes/AccountInfo.ts';
-import FormActionsBack from '../../classes/FormActionsBack.ts';
+import AccountInfo from '../../components/classes/AccountInfo.ts';
+import FormActionsBack from '../../components/classes/FormActionsBack.ts';
 
 class OrgAccountInfoFormTest extends Component {
 

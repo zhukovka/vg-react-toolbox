@@ -4,8 +4,8 @@ import {CardActionsSpaced} from 'react-toolbox-addons/lib/cardactionsspaced';
 import ButtonGroup from 'react-toolbox-addons/lib/buttongroup/ButtonGroup';
 import {Button} from 'react-toolbox/lib/button';
 import {Row} from 'react-toolbox-addons/lib/grid';
-import Admins from '../../classes/Admins.ts';
-import FormActionsBack from '../../classes/FormActionsBack.ts';
+import Admins from '../classes/Admins';
+import FormActionsBack from '../classes/FormActionsBack';
 
 class OrgAdminsForm extends VGComponentForm {
     static propTypes = {

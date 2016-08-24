@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import OrgMainInfoForm from '../../components/organizationforms/OrgMainInfoForm';
-import MainInfo from '../../classes/MainInfo.ts';
-import FormActions from '../../classes/FormActions.ts';
+import MainInfo from '../../components/classes/MainInfo.ts';
+import FormActions from '../../components/classes/FormActions.ts';
 
 class OrgMainInfoFormTest extends Component {
 

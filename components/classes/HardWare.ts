@@ -1,5 +1,5 @@
-import {DropdownPlusProps} from "../components/dropdowns";
-import {InputProps} from "../components/input";
+import {DropdownPlusProps} from "../dropdowns";
+import {InputProps} from "../input";
 class HardWare {
     type:DropdownPlusProps;
     manufacturer:DropdownPlusProps;

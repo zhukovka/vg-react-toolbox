@@ -2,8 +2,8 @@ import React, {PropTypes} from 'react';
 import VGComponentForm from '../vgcomponentform';
 import {CardActionsRight} from 'react-toolbox-addons/lib/cardactionsright';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
-import MainInfo from '../../classes/MainInfo.ts';
-import FormActions from '../../classes/FormActions.ts';
+import MainInfo from '../classes/MainInfo';
+import FormActions from '../classes/FormActions';
 
 class OrgMainInfoForm extends VGComponentForm {
     static propTypes = {

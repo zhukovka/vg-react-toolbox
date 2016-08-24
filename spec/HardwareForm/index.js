@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import HardWareForm from '../../components/hardwareform/HardWareForm';
-import HardWare from '../../classes/HardWare.ts';
-import FormActions from '../../classes/FormActions.ts';
+import HardWare from '../../components/classes/HardWare.ts';
+import FormActions from '../../components/classes/FormActions.ts';
 class HardwareFormTest extends Component {
 
     constructor (props) {

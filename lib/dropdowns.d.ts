@@ -1,4 +1,5 @@
 import __ReactToolbox from "./index.d.ts";
+
 export interface DropdownPlusTheme {
     /**
      * Added to the root element when the dropdown is active.

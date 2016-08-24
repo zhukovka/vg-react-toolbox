@@ -1,4 +1,5 @@
 import __ReactToolbox from "./index.d.ts";
+
 export interface ButtonTheme {
     /**
      * Used for the root in case button is accent.

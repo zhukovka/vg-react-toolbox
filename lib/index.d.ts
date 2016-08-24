@@ -1,4 +1,4 @@
-export declare namespace __ReactToolboxAddons {
+export declare namespace __ReactToolbox {
     interface Props {
         /**
          * Set a class for the root component.
@@ -19,4 +19,4 @@ export declare namespace __ReactToolboxAddons {
     }
 }
 
-export default __ReactToolboxAddons;
+export default __ReactToolbox;

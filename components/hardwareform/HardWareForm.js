@@ -3,8 +3,8 @@ import VGComponentForm from '../vgcomponentform';
 import {CardActionsRight} from 'react-toolbox-addons/lib/cardactionsright';
 import {Button} from 'react-toolbox/lib/button';
 import {Row} from 'react-toolbox-addons/lib/grid';
-import HardWare from '../../classes/HardWare.ts';
-import FormActions from '../../classes/FormActions.ts';
+import HardWare from '../classes/HardWare';
+import FormActions from '../classes/FormActions';
 
 class HardWareForm extends VGComponentForm {
     static propTypes = {

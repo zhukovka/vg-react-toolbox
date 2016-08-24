@@ -1,4 +1,4 @@
-import {ButtonProps} from "../components/buttons";
+import {ButtonProps} from "../buttons";
 import FormActions from "./FormActions";
 class FormActionsBack extends FormActions {
     back:ButtonProps;

@@ -1,3 +1,5 @@
 export VGComponentForm from './vgcomponentform/index';
-export * from './organizationforms';
-export * from './hardwareform';
+export OrgAdminsForm from './organizationforms/OrgAdminsForm';
+export OrgAccountInfoForm from './organizationforms/OrgAccountInfoForm';
+export OrgMainInfoForm from './organizationforms/OrgMainInfoForm';
+export HardWareForm from './hardwareform/HardWareForm';

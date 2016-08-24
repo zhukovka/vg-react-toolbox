@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import OrgAdminsForm from '../../components/organizationforms/OrgAdminsForm';
-import Admins from '../../classes/Admins.ts';
-import FormActionsBack from '../../classes/FormActionsBack.ts';
+import Admins from '../../components/classes/Admins.ts';
+import FormActionsBack from '../../components/classes/FormActionsBack.ts';
 
 class OrgAdminsFormTest extends Component {
 

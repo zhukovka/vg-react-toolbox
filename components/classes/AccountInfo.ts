@@ -1,4 +1,4 @@
-import {InputProps} from "../components/input";
+import {InputProps} from "../input";
 
 class AccountInfo {
     number:InputProps;

@@ -1,4 +1,4 @@
-import {ButtonProps} from "../components/buttons";
+import {ButtonProps} from "../buttons";
 class FormActions {
     cancel:ButtonProps;
     finish:ButtonProps;
