@@ -8,8 +8,8 @@ import FormActions from '../classes/FormActions';
 
 class HardWareForm extends VGComponentForm {
     static propTypes = {
-        info: PropTypes.instanceOf(HardWare),
-        hardwareActions: PropTypes.instanceOf(FormActions)
+        hardwareActions: PropTypes.instanceOf(FormActions),
+        info: PropTypes.instanceOf(HardWare)
     };
 
     constructor (props) {
