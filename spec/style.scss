@@ -4,3 +4,13 @@
 @import "~react-toolbox/lib/app_bar/config";
 @import "~react-toolbox/lib/button/config";
 
+body{
+  background-color: $palette-grey-200;
+}
+section{
+  width: 90%;
+  margin: auto;
+}
+h1,h2,h3,h4,h5{
+  margin: 20px 0;
+}

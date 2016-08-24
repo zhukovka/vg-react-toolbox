@@ -3,8 +3,9 @@ import 'react-toolbox/lib/commons.scss';
 import React from 'react';
 import style from './style';
 import HardwareForm from './HardwareForm/index';
-import OrgAdminForm from './OrgAdminForm/index';
-
+import OrgMainInfoForm from './OrgMainInfoForm/index';
+import OrgAccountInfoForm from './OrgAccountInfoForm/index';
+import OrgAdminsForm from './OrgAdminsForm/index';
 
 const Root = () => (
     <div className={style.app}>
@@ -12,8 +13,11 @@ const Root = () => (
             <small>Spec {VERSION}</small>
         </h1>
         <HardwareForm/>
-        <hr style={{margin:'50px'}}/>
-        <OrgAdminForm/>
+        <hr style={{margin: '50px'}}/>
+        <OrgMainInfoForm/>
+        <OrgAccountInfoForm/>
+        <OrgAdminsForm/>
+
     </div>
 );
 

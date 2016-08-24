@@ -121,6 +121,7 @@ class VGComponentForm extends Component {
             type: React.PropTypes.string,
             value: React.PropTypes.any
         })),
+        onSubmit: PropTypes.func,
         textareas: PropTypes.arrayOf(PropTypes.shape({
             key: PropTypes.string.isRequired,
             label: PropTypes.string,
@@ -135,8 +136,11 @@ class VGComponentForm extends Component {
         const dropdowns = this.props.dropdowns || [];
         const inputs = this.props.inputs || [];
         const textareas = this.props.textareas || [];
+        this.state = this.setInitialState([...dropdowns, ...inputs, ...textareas]);
+    }
 
-        this.state = [...dropdowns, ...inputs, ...textareas].reduce((_state, item)=> {
+    setInitialState (items) {
+        return items.reduce((_state, item)=> {
             if (!item.key) {
                 throw new Error('Key property is required by VGComponentForm');
             }
@@ -144,7 +148,6 @@ class VGComponentForm extends Component {
             return _state;
         }, {});
     }
-
 
     renderDropDowns (dropdowns = []) {
         return dropdowns.map((dropdown)=> {
@@ -162,20 +165,21 @@ class VGComponentForm extends Component {
     }
 
     renderInputs (inputs) {
-        return inputs.map((_input)=> {
-            /*eslint no-unused-vars:0*/
-            const {key, onChange, value, ...other} = _input;
+        return inputs.map((input)=>this.renderInput(input), this);
+    }
 
-            return (
-                <Col key={`col-${key}`} medium={6} small={12}>
-                    <Input
-                        onChange={(val)=>this.setState({[key]: val}, ()=>onChange(val))}
-                        value={this.state[key]}
-                        {...other}
-                    />
-                </Col>
-            );
-        }, this);
+    renderInput (_input, sizes = {small: 12, medium: 6, large: 6}) {
+        /*eslint no-unused-vars:0*/
+        const {key, onChange, value, ...other} = _input;
+        return (
+            <Col key={`col-${_input.key}`} {...sizes}>
+                <Input
+                    onChange={(val)=>this.setState({[key]: val}, ()=>onChange(val))}
+                    value={this.state[key]}
+                    {...other}
+                />
+            </Col>
+        );
     }
 
     renderCardActionsRight (buttons = []) {
@@ -186,9 +190,9 @@ class VGComponentForm extends Component {
         });
     }
 
-    render () {
+    renderFormContent () {
         return (
-            <Card>
+            <fieldset>
                 <Row expanded>
                     {this.renderDropDowns(this.props.dropdowns)}
                     {this.renderInputs(this.props.inputs)}
@@ -196,9 +200,21 @@ class VGComponentForm extends Component {
                 <CardActionsRight>
                     {this.renderCardActionsRight(this.props.buttons)}
                 </CardActionsRight>
+            </fieldset>
+        );
+    }
+
+    render () {
+        return (
+            <Card>
+                <form action="" onSubmit={this.props.onSubmit}>
+                    {this.renderFormContent()}
+                </form>
             </Card>
         );
     }
+
+
 }
 
 export default VGComponentForm;

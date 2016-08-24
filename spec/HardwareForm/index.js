@@ -1,14 +1,15 @@
 import React, {Component} from 'react';
-import VGComponentForm from '../../components/vgcomponentform/index';
-
-class HardwareForm extends Component {
+import HardWareForm from '../../components/hardwareform/HardWareForm';
+import HardWare from '../../classes/HardWare.ts';
+import FormActions from '../../classes/FormActions.ts';
+class HardwareFormTest extends Component {
 
     constructor (props) {
         super(props);
         const sources = [{value: 'EN-gb', label: 'England'}, {value: 'ES-es', label: 'Spain'},
             {value: 'TH-th', label: 'Thailand'},
             {value: 'EN-en', label: 'USA'}];
-        const inp = {
+        const uid = {
             label: 'Unique id',
             name: 'uid',
             key: 'uid-input',
@@ -19,7 +20,7 @@ class HardwareForm extends Component {
             value: '67676'
         };
 
-        const dd1 = {
+        const type = {
             name: 'dd1',
             key: 'dd1',
             label: 'type',
@@ -31,7 +32,7 @@ class HardwareForm extends Component {
         };
 
 
-        const dd2 = {
+        const manufacturer = {
             name: 'dd2',
             key: 'dd2',
             label: 'manufacturers',
@@ -44,7 +45,7 @@ class HardwareForm extends Component {
                 console.log(val);
             }
         };
-        const dd3 = {
+        const model = {
             name: 'dd3',
             key: 'dd3',
             label: 'model',
@@ -54,37 +55,45 @@ class HardwareForm extends Component {
                 console.log(val);
             }
         };
-        this.dropdowns = [dd1, dd2, dd3];
-        this.inputs = [inp];
 
-        const btn1 = {
+        const cancel = {
             key: 'cancel-btn',
             label: 'Cancel',
+            type: 'button',
             onClick: ()=> {
                 console.log('cancelled');
             }
         };
-        const btn2 = {
+        const finish = {
             key: 'finish-btn',
             label: 'Finish',
             primary: true,
+            type: 'submit',
             onClick: ()=> {
                 console.log('finished');
             }
         };
-        this.buttons = [btn1, btn2];
+        this.actions = new FormActions(cancel, finish);
+        this.hardware = new HardWare(type, manufacturer, model, uid);
     }
 
 
     render () {
         return (
-            <VGComponentForm
-                dropdowns={this.dropdowns}
-                inputs={this.inputs}
-                buttons={this.buttons}
-            />
+            <section>
+                <h5><a href="https://invis.io/ST872JFNH#/182231979_MD_Add_New_Hardware_For_OrgAdmin">HardwareForm</a>
+                </h5>
+                <HardWareForm
+                    onSubmit={(e)=>{
+                        e.preventDefault();
+                        console.log(this);
+                    }}
+                    info={this.hardware}
+                    hardwareActions={this.actions}
+                />
+            </section>
         );
     }
 }
 
-export default HardwareForm;
+export default HardwareFormTest;
