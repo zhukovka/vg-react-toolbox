@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
-import OrgFormMain from '../../components/organizationforms/OrgFormMain';
+import OrgMainInfoForm from '../../components/organizationforms/OrgMainInfoForm';
 import MainInfo from '../../classes/MainInfo.ts';
-class OrgAdminForm extends Component {
+import FormActions from '../../classes/FormActions.ts';
+
+class OrgMainInfoFormTest extends Component {
 
     constructor (props) {
         super(props);
@@ -78,6 +80,7 @@ class OrgAdminForm extends Component {
         const btn1 = {
             key: 'cancel-btn',
             label: 'Cancel',
+            type: 'button',
             onClick: ()=> {
                 console.log('cancelled');
             }
@@ -85,24 +88,34 @@ class OrgAdminForm extends Component {
         const btn2 = {
             key: 'finish-btn',
             label: 'Finish',
+            type: 'submit',
             primary: true,
             onClick: ()=> {
-                console.log('finished');
+                console.log('submit');
             }
         };
-        this.buttons = [btn1, btn2];
+        this.orgActions = new FormActions(btn1, btn2);
         this.maininfo = new MainInfo(name, id, {street, city, state, postcode, country});
     }
 
 
     render () {
         return (
-            <OrgFormMain
-                buttons={this.buttons}
-                info = {this.maininfo}
-            />
+            <section>
+                <h5><a
+                    href="https://invis.io/ST872JFNH#/180341597_MD_CORR_Create_New_Organization_ST1">OrgMainInfoForm</a>
+                </h5>
+
+                <OrgMainInfoForm
+                    onSubmit={(e)=>{
+                        e.preventDefault();
+                    }}
+                    orgActions={this.orgActions}
+                    info={this.maininfo}
+                />
+            </section>
         );
     }
 }
 
-export default OrgAdminForm;
+export default OrgMainInfoFormTest;
