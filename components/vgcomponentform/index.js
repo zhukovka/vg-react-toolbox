@@ -137,7 +137,7 @@ class VGComponentForm extends Component {
 
         this.state = [...dropdowns, ...inputs, ...textareas].reduce((_state, item)=> {
             if (!item.key) {
-                throw new Error('Key property is required by VGComponentTorm');
+                throw new Error('Key property is required by VGComponentForm');
             }
             _state[item.key] = item.value;
             return _state;
