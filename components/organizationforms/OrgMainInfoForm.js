@@ -1,28 +1,29 @@
 import React, {PropTypes} from 'react';
 import VGComponentForm from '../vgcomponentform';
-import {Card} from 'react-toolbox/lib/card';
 import {CardActionsRight} from 'react-toolbox-addons/lib/cardactionsright';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
 import MainInfo from '../../classes/MainInfo.ts';
+import FormActions from '../../classes/FormActions.ts';
 
-class OrgFormMain extends VGComponentForm {
+class OrgMainInfoForm extends VGComponentForm {
     static propTypes = {
-        info: PropTypes.instanceOf(MainInfo)
+        info: PropTypes.instanceOf(MainInfo),
+        orgActions: PropTypes.instanceOf(FormActions)
     };
 
     constructor (props) {
         super(props);
-        const {info} = props;
+        const {info} = this.props;
         const {street, city, state, postcode, country} = info.address;
         const inputs = [info.name, info.id, street, city, state, postcode, country];
         this.state = this.setInitialState(inputs);
     }
 
-    render () {
-        const {info, buttons} = this.props;
+    renderFormContent () {
+        const {info, orgActions} = this.props;
         const {street, city, state, postcode, country} = info.address;
         return (
-            <Card>
+            <fieldset>
                 <Row expanded>
                     {this.renderInputs([info.name, info.id])}
                 </Row>
@@ -40,11 +41,11 @@ class OrgFormMain extends VGComponentForm {
                     {this.renderInput(country)}
                 </Row>
                 <CardActionsRight>
-                    {this.renderCardActionsRight(buttons)}
+                    {this.renderCardActionsRight([orgActions.cancel, orgActions.finish])}
                 </CardActionsRight>
-            </Card>
+            </fieldset>
         );
     }
 }
 
-export default OrgFormMain;
+export default OrgMainInfoForm;
