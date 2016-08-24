@@ -11,7 +11,7 @@ class MainInfo {
     id: InputProps;
     address: Address;
 
-    constructor(name: string, id: string, address: Address) {
+    constructor(name: InputProps, id: InputProps, address: Address) {
         this.name = name;
         this.id = id;
         this.address = address;
