@@ -1,5 +1,4 @@
 import __ReactToolbox from "./index.d.ts";
-
 export interface InputTheme {
     /**
      * Used for the bar under the input.
