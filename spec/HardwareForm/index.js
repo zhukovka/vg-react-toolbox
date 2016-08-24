@@ -14,6 +14,7 @@ class HardwareForm extends Component {
         const inp = {
             label: 'Unique id',
             name: 'uid',
+            key: 'uid-input',
             onChange (val){
                 console.log('kuku');
             },
@@ -23,6 +24,7 @@ class HardwareForm extends Component {
 
         const dd1 = {
             name: 'dd1',
+            key: 'dd1',
             label: 'type',
             value: 'EN-gb',
             source: sources,
@@ -35,6 +37,7 @@ class HardwareForm extends Component {
 
         const dd2 = {
             name: 'dd2',
+            key: 'dd2',
             label: 'manufacturers',
             value: 'ES-es',
             source: sources,
@@ -44,6 +47,7 @@ class HardwareForm extends Component {
         };
         const dd3 = {
             name: 'dd3',
+            key: 'dd3',
             label: 'model',
             value: 'TH-th',
             source: sources,
@@ -55,12 +59,14 @@ class HardwareForm extends Component {
         this.inputs = [inp];
 
         const btn1 = {
+            key: 'cancel-btn',
             label: 'Cancel',
             onClick: ()=> {
                 console.log('cancelled');
             }
         };
         const btn2 = {
+            key: 'finish-btn',
             label: 'Finish',
             primary: true,
             onClick: ()=> {

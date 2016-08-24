@@ -1,1 +1,1 @@
-
+export const VGCOMPONENTFORM = 'VGComponentForm';
