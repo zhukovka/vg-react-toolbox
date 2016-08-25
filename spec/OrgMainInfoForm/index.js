@@ -112,6 +112,7 @@ class OrgMainInfoFormTest extends Component {
                     }}
                     orgActions={this.orgActions}
                     info={this.maininfo}
+                    onUpload={(file)=>console.log(file)}
                 />
             </section>
         );

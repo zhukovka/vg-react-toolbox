@@ -4,11 +4,13 @@ import {CardActionsRight} from 'react-toolbox-addons/lib/cardactionsright';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
 import MainInfo from '../classes/MainInfo';
 import FormActions from '../classes/FormActions';
+import {Upload} from 'react-toolbox-addons/lib/upload-zone';
 
 class OrgMainInfoForm extends VGComponentForm {
     static propTypes = {
         info: PropTypes.instanceOf(MainInfo),
-        orgActions: PropTypes.instanceOf(FormActions)
+        orgActions: PropTypes.instanceOf(FormActions),
+        onUpload: PropTypes.func
     };
 
     constructor (props) {
@@ -24,6 +26,8 @@ class OrgMainInfoForm extends VGComponentForm {
         const {street, city, state, postcode, country} = info.address;
         return (
             <fieldset>
+                <Upload onUpload={this.props.onUpload}>
+                </Upload>
                 <Row expanded>
                     {this.renderInputs([info.name, info.id])}
                 </Row>
