@@ -31,11 +31,15 @@ class HardwareFormTest extends Component {
             label: 'type',
             value: 'EN-gb',
             source: sources,
-            onChange: (val)=>{
+            onChange: (val)=> {
                 console.log(val);
-                this.setState({
-                    typeError: 'ololo'
-                }, ()=>console.log(this.state));
+                if (val === 'TH-th') {
+                    type.error = 'beda';
+                    this.setState({isValid: false});
+                } else {
+                    type.error = '';
+                    this.setState({isValid: true});
+                }
             },
             error: this.state.typeError
         };
@@ -50,8 +54,15 @@ class HardwareFormTest extends Component {
             onAddAnother (){
                 console.log('kukuruku');
             },
-            onChange (val){
+            onChange: (val)=> {
                 console.log(val);
+                if (val === 'TH-th') {
+                    manufacturer.error = 'beda';
+                    this.setState({isValid: false});
+                } else {
+                    manufacturer.error = null;
+                    this.setState({isValid: true});
+                }
             }
         };
         const model = {
