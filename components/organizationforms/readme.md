@@ -5,7 +5,7 @@ info: PropTypes.instanceOf(MainInfo),
 
 orgActions: PropTypes.instanceOf(FormActions),
 
-onUpload: Callback<File file, String result, DOMEvent event>
+onUpload: Callback\<File file, String result, DOMEvent event\>
 
 ### FormActions
     
