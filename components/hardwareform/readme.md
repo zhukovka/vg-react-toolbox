@@ -5,7 +5,7 @@ hardwareActions: PropTypes.instanceOf(FormActions)
 
 info: PropTypes.instanceOf(HardwareFields)
 
-onUpload: Callback<File file, String result, DOMEvent event>
+onUpload: Callback3\<File file, String result, DOMEvent event\>
 
 ### FormActions
     
