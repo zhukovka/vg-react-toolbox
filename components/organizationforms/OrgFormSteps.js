@@ -13,7 +13,7 @@ const OrgFormSteps = (props)=> {
     );
 };
 
-OrgFormSteps.propType = {
+OrgFormSteps.propTypes = {
     steps: PropTypes.arrayOf(Step)
 };
 

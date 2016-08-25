@@ -9,8 +9,8 @@ import {Upload} from 'react-toolbox-addons/lib/upload-zone';
 class OrgMainInfoForm extends VGComponentForm {
     static propTypes = {
         info: PropTypes.instanceOf(MainInfo),
-        orgActions: PropTypes.instanceOf(FormActions),
-        onUpload: PropTypes.func
+        onUpload: PropTypes.func,
+        orgActions: PropTypes.instanceOf(FormActions)
     };
 
     constructor (props) {
@@ -26,8 +26,7 @@ class OrgMainInfoForm extends VGComponentForm {
         const {street, city, state, postcode, country} = info.address;
         return (
             <fieldset>
-                <Upload onUpload={this.props.onUpload}>
-                </Upload>
+                <Upload onUpload={this.props.onUpload} />
                 <Row expanded>
                     {this.renderInputs([info.name, info.id])}
                 </Row>

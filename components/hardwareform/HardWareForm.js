@@ -25,8 +25,7 @@ class HardWareForm extends VGComponentForm {
         const {cancel, finish} = this.props.hardwareActions;
         return (
             <fieldset>
-                <Upload onUpload={this.props.onUpload}>
-                </Upload>
+                <Upload onUpload={this.props.onUpload}/>
                 <Row expanded>
                     {this.renderDropDowns([type, manufacturer, model])}
                     {this.renderInput(uid)}

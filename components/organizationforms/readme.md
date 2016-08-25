@@ -60,6 +60,25 @@ import OrgMainInfoForm from 'vg-react-toolbox/lib/organizationforms/OrgMainInfoF
 
 # OrgFormSteps
 
+#### Example
+```
+var steps = [{
+            name: 'Main Information',
+            done: true
+            }, {
+            name: 'Account Information',
+            done: true
+            }, {
+            name: 'Organization Admins', 
+            active: true}, 
+            {name: 'Hardware'},
+            {name: 'Summary'}];
+//...
+
+<OrgFormSteps steps={steps}/>
+
+```
+
 ### Props
 
 steps: PropTypes.arrayOf(Step)
