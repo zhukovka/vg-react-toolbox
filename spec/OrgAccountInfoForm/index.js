@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import OrgAccountInfoForm from '../../components/organizationforms/OrgAccountInfoForm';
 import AccountInfo from '../../components/classes/AccountInfo.ts';
 import FormActionsBack from '../../components/classes/FormActionsBack.ts';
+import OrgFormSteps from '../../components/organizationforms/OrgFormSteps';
 
 class OrgAccountInfoFormTest extends Component {
 
@@ -74,6 +75,12 @@ class OrgAccountInfoFormTest extends Component {
         };
         this.accountinfo = new AccountInfo(number, information, amount, cardNumber);
         this.orgActions = new FormActionsBack(back, cancel, finish);
+        this.steps = [{
+            name: 'Main Information',
+            done: true
+        }, {
+            name: 'Account Information', active: true
+        }, {name: 'Organization Admins'}, {name: 'Hardware'}, {name: 'Summary'}];
     }
 
 
@@ -82,13 +89,13 @@ class OrgAccountInfoFormTest extends Component {
             <section>
                 <h5><a href="https://invis.io/ST872JFNH#/180341590_MD_CORR_Create_New_Organization_ST2">OrgAccountInfoForm</a>
                 </h5>
-
+                <OrgFormSteps steps={this.steps}/>
                 <OrgAccountInfoForm
                     onSubmit={(e)=>{
                         e.preventDefault();
                     }}
                     info={this.accountinfo}
-                    orgActions = {this.orgActions}
+                    orgActions={this.orgActions}
                 />
             </section>
         );

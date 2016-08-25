@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import OrgAdminsForm from '../../components/organizationforms/OrgAdminsForm';
 import Admins from '../../components/classes/Admins.ts';
 import FormActionsBack from '../../components/classes/FormActionsBack.ts';
-
+import OrgFormSteps from '../../components/organizationforms/OrgFormSteps';
 class OrgAdminsFormTest extends Component {
 
     constructor (props) {
@@ -95,6 +95,13 @@ class OrgAdminsFormTest extends Component {
         };
         this.admins = new Admins(firstname, lastname, email, phone, title, notes);
         this.orgActions = new FormActionsBack(back, cancel, finish);
+        this.steps = [{
+            name: 'Main Information',
+            done: true
+        }, {
+            name: 'Account Information',
+            done: true
+        }, {name: 'Organization Admins', active: true}, {name: 'Hardware'}, {name: 'Summary'}];
     }
 
 
@@ -104,7 +111,7 @@ class OrgAdminsFormTest extends Component {
                 <h5><a
                     href="https://invis.io/ST872JFNH#/180341599_MD_CORR_Create_New_Organization_ST3">OrgAdminsForm</a>
                 </h5>
-
+                <OrgFormSteps steps={this.steps}/>
                 <OrgAdminsForm
                     onSubmit={(e)=>{
                         e.preventDefault();

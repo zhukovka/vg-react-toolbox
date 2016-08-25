@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import OrgMainInfoForm from '../../components/organizationforms/OrgMainInfoForm';
 import MainInfo from '../../components/classes/MainInfo.ts';
 import FormActions from '../../components/classes/FormActions.ts';
-
+import OrgFormSteps from '../../components/organizationforms/OrgFormSteps';
 class OrgMainInfoFormTest extends Component {
 
     constructor (props) {
@@ -96,6 +96,10 @@ class OrgMainInfoFormTest extends Component {
         };
         this.orgActions = new FormActions(btn1, btn2);
         this.maininfo = new MainInfo(name, id, {street, city, state, postcode, country});
+        this.steps = [{
+            name: 'Main Information',
+            active: true
+        }, {name: 'Account Information'}, {name: 'Organization Admins'}, {name: 'Hardware'}, {name: 'Summary'}];
     }
 
 
@@ -105,7 +109,7 @@ class OrgMainInfoFormTest extends Component {
                 <h5><a
                     href="https://invis.io/ST872JFNH#/180341597_MD_CORR_Create_New_Organization_ST1">OrgMainInfoForm</a>
                 </h5>
-
+                <OrgFormSteps steps={this.steps}/>
                 <OrgMainInfoForm
                     onSubmit={(e)=>{
                         e.preventDefault();
@@ -113,6 +117,7 @@ class OrgMainInfoFormTest extends Component {
                     orgActions={this.orgActions}
                     info={this.maininfo}
                     onUpload={(file)=>console.log(file)}
+
                 />
             </section>
         );
