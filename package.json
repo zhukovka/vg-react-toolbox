@@ -78,7 +78,7 @@
   },
   "scripts": {
     "babel": "babel ./components --out-dir ./lib",
-    "build": "cross-env NODE_ENV=production npm run babel && npm run sass && npm run tsd && npm run tsc",
+    "build": "cross-env NODE_ENV=production npm run babel && npm run sass && npm run tsd",
     "clean": "rimraf ./lib",
     "lint": "npm run lint:js && npm run lint:scss",
     "lint:js": "eslint ./ --ext .js",

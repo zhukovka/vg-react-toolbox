@@ -6,6 +6,11 @@ class HardwareFormTest extends Component {
 
     constructor (props) {
         super(props);
+
+        this.state = {
+            typeError: ''
+        };
+
         const sources = [{value: 'EN-gb', label: 'England'}, {value: 'ES-es', label: 'Spain'},
             {value: 'TH-th', label: 'Thailand'},
             {value: 'EN-en', label: 'USA'}];
@@ -26,9 +31,13 @@ class HardwareFormTest extends Component {
             label: 'type',
             value: 'EN-gb',
             source: sources,
-            onChange (val){
+            onChange: (val)=>{
                 console.log(val);
-            }
+                this.setState({
+                    typeError: 'ololo'
+                });
+            },
+            error: this.state.typeError
         };
 
 
