@@ -35,7 +35,7 @@ class HardwareFormTest extends Component {
                 console.log(val);
                 this.setState({
                     typeError: 'ololo'
-                });
+                }, ()=>console.log(this.state));
             },
             error: this.state.typeError
         };
@@ -99,6 +99,7 @@ class HardwareFormTest extends Component {
                     }}
                     info={this.hardware}
                     hardwareActions={this.actions}
+                    onUpload={(file)=>console.log(file)}
                 />
             </section>
         );

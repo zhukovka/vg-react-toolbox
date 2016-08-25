@@ -1,4 +1,4 @@
-/// <reference path="react.d.ts"/>
+/// <reference path="../components/react.d.ts"/>
 import __ReactToolbox from "./index.d.ts";
 export interface ButtonTheme {
     /**

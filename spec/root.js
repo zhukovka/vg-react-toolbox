@@ -6,7 +6,6 @@ import HardwareForm from './HardwareForm/index';
 import OrgMainInfoForm from './OrgMainInfoForm/index';
 import OrgAccountInfoForm from './OrgAccountInfoForm/index';
 import OrgAdminsForm from './OrgAdminsForm/index';
-
 const Root = () => (
     <div className={style.app}>
         <h1>VG React Toolbox

@@ -5,11 +5,13 @@ import {Button} from 'react-toolbox/lib/button';
 import {Row} from 'react-toolbox-addons/lib/grid';
 import HardwareFields from '../classes/HardwareFields';
 import FormActions from '../classes/FormActions';
+import {Upload} from 'react-toolbox-addons/lib/upload-zone';
 
 class HardWareForm extends VGComponentForm {
     static propTypes = {
         hardwareActions: PropTypes.instanceOf(FormActions),
-        info: PropTypes.instanceOf(HardwareFields)
+        info: PropTypes.instanceOf(HardwareFields),
+        onUpload: PropTypes.func
     };
 
     constructor (props) {
@@ -23,6 +25,8 @@ class HardWareForm extends VGComponentForm {
         const {cancel, finish} = this.props.hardwareActions;
         return (
             <fieldset>
+                <Upload onUpload={this.props.onUpload}>
+                </Upload>
                 <Row expanded>
                     {this.renderDropDowns([type, manufacturer, model])}
                     {this.renderInput(uid)}
