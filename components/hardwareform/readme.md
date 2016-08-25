@@ -8,6 +8,9 @@ info: PropTypes.instanceOf(HardwareFields)
 onUpload: PropTypes.func
 
 ### FormActions
+    
+ButtonProps - react-toolbox  definition
+
 ```
 class FormActions {
     cancel:ButtonProps;
@@ -21,6 +24,11 @@ class FormActions {
 ```
 
 ### HardwareFields
+
+InputProps react-toolbox  definition
+
+DropdownPlusProps - react-addons-toolbox  definition
+
 ```
 class HardwareFields {
     type:DropdownPlusProps;
