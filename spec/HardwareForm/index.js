@@ -18,8 +18,10 @@ class HardwareFormTest extends Component {
             label: 'Unique id',
             name: 'uid',
             key: 'uid-input',
-            onChange (val){
+            onChange: (val)=> {
                 console.log(val);
+                uid.error = 'beda';
+                this.setState({isValid: false});
             },
             type: 'text',
             value: '67676'

@@ -7,13 +7,22 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     context: __dirname,
     devtool: 'inline-source-map',
-    entry: [
-        'webpack-hot-middleware/client',
-        './spec/index.js'
-    ],
+    entry: {
+        main: ['webpack-hot-middleware/client',
+            './spec/index.js'
+        ],
+        mission: ['webpack-hot-middleware/client',
+            './spec/mission/index.js']
+    },
+    // output: {
+    //     // Make sure to use [name] or [id] in output.filename
+    //     //  when using multiple entry points
+    //     filename: "[name].bundle.js",
+    //     chunkFilename: "[id].bundle.js"
+    // },
     output: {
         path: path.join(__dirname, 'build'),
-        filename: 'spec.js',
+        filename: '[name].spec.js',
         publicPath: '/build/'
     },
     resolve: {
@@ -39,7 +48,7 @@ module.exports = {
     },
     postcss: [autoprefixer],
     plugins: [
-        new ExtractTextPlugin('spec.css', {allChunks: true}),
+        new ExtractTextPlugin('[name].css', {allChunks: true}),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoErrorsPlugin(),
         new webpack.DefinePlugin({

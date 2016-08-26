@@ -19,6 +19,9 @@ app.use(require('webpack-hot-middleware')(compiler));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, './spec/index.html'));
 });
+app.get('/mission', function (req, res) {
+  res.sendFile(path.join(__dirname, './spec/mission/index.html'));
+});
 app.get('/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, './favicon.ico'));
 });
