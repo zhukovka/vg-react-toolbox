@@ -14,12 +14,6 @@ module.exports = {
         mission: ['webpack-hot-middleware/client',
             './spec/mission/index.js']
     },
-    // output: {
-    //     // Make sure to use [name] or [id] in output.filename
-    //     //  when using multiple entry points
-    //     filename: "[name].bundle.js",
-    //     chunkFilename: "[id].bundle.js"
-    // },
     output: {
         path: path.join(__dirname, 'build'),
         filename: '[name].spec.js',
