@@ -4,7 +4,7 @@ import {List, ListItem} from 'react-toolbox/lib/list';
 import MissionBar from '../../components/mission/MissionBar';
 import UsersPanel from '../../components/mission/UsersPanel';
 import PlayerPanel from '../../components/mission/PlayerPanel';
-import SideBarPlus from 'react-toolbox-addons/lib/sidebarplus';
+import SidebarPlus from 'react-toolbox-addons/lib/sidebarplus';
 
 class MissionPageTest extends Component {
     state = {
@@ -74,9 +74,9 @@ class MissionPageTest extends Component {
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/sGbxmsDFVnE?rel=0&amp;showinfo=0"
                                 frameBorder="0" allowFullScreen ref={(iframe)=>console.log(iframe)}/>
                     </PlayerPanel>
-                    <SideBarPlus title={this.state.sidePanelTitle} pinned={this.state.sidePanelOpen}>
+                    <SidebarPlus title={this.state.sidePanelTitle} pinned={this.state.sidePanelOpen}>
                         {this.renderSidePanelContent(this.state.sidePanelTitle)}
-                    </SideBarPlus>
+                    </SidebarPlus>
                 </Layout>
             </section>
         );

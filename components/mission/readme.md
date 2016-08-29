@@ -32,9 +32,9 @@ extends Panel from [Layout](http://react-toolbox.com/#/components/layout)
 | `expand`     | `Callback1<DOMEvent>`    | `undefined`  | callback for expand icon click|
 | `fullscreen`     | `Callback1<DOMEvent>`    | `undefined`  | callback for fullscreen icon click|
 
-# SideBarPlus 
+# SidebarPlus 
 
-extends SideBar from [Layout](http://react-toolbox.com/#/components/layout)
+extends Sidebar from [Layout](http://react-toolbox.com/#/components/layout)
 
 ## Properties
 
@@ -53,7 +53,7 @@ import {List, ListItem} from 'react-toolbox/lib/list';
 import MissionBar from 'vg-react-toolbox/lib/mission/MissionBar';
 import UsersPanel from 'vg-react-toolbox/lib/components/mission/UsersPanel';
 import PlayerPanel from 'vg-react-toolbox/lib/components/mission/PlayerPanel';
-import SideBarPlus from 'react-toolbox-addons/lib/sidebarplus';
+import SidebarPlus from 'react-toolbox-addons/lib/sidebarplus';
 class MissionPageTest extends Component {
     state = {
         sidePanelOpen: true,
@@ -122,9 +122,9 @@ class MissionPageTest extends Component {
                         <iframe width="100%" height="100%" src="https://www.youtube.com/embed/sGbxmsDFVnE?rel=0&amp;showinfo=0"
                                 frameBorder="0" allowFullScreen ref={(iframe)=>console.log(iframe)}/>
                     </PlayerPanel>
-                    <SideBarPlus title={this.state.sidePanelTitle} pinned={this.state.sidePanelOpen}>
+                    <SidebarPlus title={this.state.sidePanelTitle} pinned={this.state.sidePanelOpen}>
                         {this.renderSidePanelContent(this.state.sidePanelTitle)}
-                    </SideBarPlus>
+                    </SidebarPlus>
                 </Layout>
             </section>
         );
