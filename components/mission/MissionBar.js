@@ -5,10 +5,10 @@ import {IconButton} from 'react-toolbox/lib/button';
 import ButtonGroup from 'react-toolbox-addons/lib/buttongroup/ButtonGroup';
 
 /**
- * MissionBar react element
- * @param userIconClick {Callback1<DOMEvent>} callback on icon click
- * @param weatherClick {Callback1<DOMEvent>} callback on icon click
- * @param mapClick {Callback1<DOMEvent>} callback on icon click
+ * MissionBar react component
+ * @param userIconClick {Callback1<DOMEvent>} callback on user icon click
+ * @param weatherClick {Callback1<DOMEvent>} callback on weather icon click
+ * @param mapClick {Callback1<DOMEvent>} callback on map icon click
  * @returns {JSX}
  * @constructor
  */

@@ -2,6 +2,14 @@ import React, {PropTypes} from 'react';
 import {Panel} from 'react-toolbox';
 import VideoPanel from 'react-toolbox-addons/lib/videopanel';
 
+/**
+ * PlayerPanel react component
+ * @param children {array|object|node}
+ * @param expand {Callback1<DOMEvent>} callback on expand icon click
+ * @param fullscreen {Callback1<DOMEvent>} callback on fullscreen icon click
+ * @returns {JSX}
+ * @constructor
+ */
 const PlayerPanel = ({children, expand, fullscreen})=> {
     const video = Array.isArray(children) ? children[0] : children;
     const _children = Array.isArray(children) ? children.slice(1) : null;
