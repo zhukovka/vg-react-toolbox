@@ -4,14 +4,14 @@ import VideoPanel from 'react-toolbox-addons/lib/videopanel';
 
 const PlayerPanel = ({children, expand, fullscreen})=> {
     const video = Array.isArray(children) ? children.shift() : children;
-    children = Array.isArray(children) ? children : null;
+    const _children = Array.isArray(children) ? children : null;
     return (
         <Panel>
             <VideoPanel
                 buttons={[{icon: 'view_array', inverse: true, onClick: (e)=>expand(e)}, {icon: 'fullscreen', inverse: true, onClick: (e)=>fullscreen(e)}]}>
                 {video}
             </VideoPanel>
-            {children}
+            {_children}
         </Panel>);
 };
 PlayerPanel.propTypes = {
