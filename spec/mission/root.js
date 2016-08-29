@@ -1,4 +1,3 @@
-/* global VERSION */
 import 'react-toolbox/lib/commons.scss';
 import React from 'react';
 import MissionPage from '../MissionPage/index';

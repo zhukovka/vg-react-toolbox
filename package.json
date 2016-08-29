@@ -23,7 +23,6 @@
     "react-dom": "^15.3.0",
     "react-toolbox": "^1.1.2",
     "react-toolbox-addons": "^1.0.7",
-    "typescript": "^1.8.10"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
@@ -71,6 +70,7 @@
     "style-loader": "^0.13.1",
     "toolbox-loader": "0.0.3",
     "ts-loader": "^0.8.2",
+    "typescript": "^1.8.10",
     "webpack": "^1.13.0",
     "webpack-dev-middleware": "^1.6.1",
     "webpack-hot-middleware": "^2.10.0"
