@@ -4,6 +4,14 @@ import CardActionsSpaced from 'react-toolbox-addons/lib/cardactionsspaced';
 import {IconButton} from 'react-toolbox/lib/button';
 import ButtonGroup from 'react-toolbox-addons/lib/buttongroup/ButtonGroup';
 
+/**
+ * MissionBar react element
+ * @param userIconClick {Callback1<DOMEvent>} callback on icon click
+ * @param weatherClick {Callback1<DOMEvent>} callback on icon click
+ * @param mapClick {Callback1<DOMEvent>} callback on icon click
+ * @returns {JSX}
+ * @constructor
+ */
 const MissionBar = ({userIconClick, weatherClick, mapClick})=> {
     return (
         <Card>

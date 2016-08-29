@@ -71,8 +71,12 @@ class MissionPageTest extends Component {
                     </UsersPanel>
                     <PlayerPanel
                         expand={()=>this.setState({sidePanelOpen: !this.state.sidePanelOpen && !this.state.usersPanelOpen, usersPanelOpen: !this.state.sidePanelOpen && !this.state.usersPanelOpen})}>
-                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/sGbxmsDFVnE?rel=0&amp;showinfo=0"
+                        <iframe width="100%" height="100%"
+                                src="https://www.youtube.com/embed/sGbxmsDFVnE?rel=0&amp;showinfo=0"
                                 frameBorder="0" allowFullScreen ref={(iframe)=>console.log(iframe)}/>
+                        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda dicta dolor doloremque
+                            est hic iusto libero nihil numquam, obcaecati pariatur recusandae similique voluptates.
+                            Adipisci odio optio praesentium quis reiciendis, vel.</h2>
                     </PlayerPanel>
                     <SidebarPlus title={this.state.sidePanelTitle} pinned={this.state.sidePanelOpen}>
                         {this.renderSidePanelContent(this.state.sidePanelTitle)}
