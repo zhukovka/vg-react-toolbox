@@ -26,7 +26,7 @@ const MissionBar = ({userIconClick, weatherClick, mapClick})=> {
 };
 MissionBar.propTypes = {
     /**
-     * mapClick {Callback1<DOMEvent>} callback on map icon click
+     * mapClick {Callback1\<DOMEvent\>} callback on map icon click
      */
     mapClick: PropTypes.func,
     /**
