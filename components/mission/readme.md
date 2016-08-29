@@ -10,7 +10,7 @@
 
 
 
-# UserPanel 
+# UsersPanel 
 
 extends NawDrawer from [Layout](http://react-toolbox.com/#/components/layout)
 
