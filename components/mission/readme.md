@@ -1,17 +1,29 @@
 ## MissionBar `<MissionBar/>`
 MissionBar react element
-``` /** 
+
+``` 
+ /** 
  * callback on icon click 
-*/ ``` 
- **userIconClick** Callback1<DOMEvent>
-``` /** 
+*/  
+```
+**userIconClick** Callback1<DOMEvent> 
+
+
+``` 
+ /** 
  * callback on icon click 
-*/ ``` 
- **weatherClick** Callback1<DOMEvent>
-``` /** 
+*/  
+```
+**weatherClick** Callback1<DOMEvent> 
+
+
+``` 
+ /** 
  * callback on icon click 
-*/ ``` 
- **mapClick** Callback1<DOMEvent>
+*/  
+```
+**mapClick** Callback1<DOMEvent> 
+
 @returns {JSX}
 @constructor
 

@@ -6,7 +6,7 @@ function generateTitle (name) {
 
 function generateDesciption (description) {
   return description.replace(/@param\s*(\w*)\s*{(.+)}(.*)/g, (match, p1, p2, p3)=>{
-        return `\`\`\` /** \n *${p3} \n*/  \n **${p1}** ${p2} \`\`\``;
+        return `\n\`\`\` \n /** \n *${p3} \n*/  \n\`\`\`\n**${p1}** ${p2} \n`;
       }) + '\n';
 }
 
