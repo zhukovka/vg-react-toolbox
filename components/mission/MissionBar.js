@@ -25,8 +25,17 @@ const MissionBar = ({userIconClick, weatherClick, mapClick})=> {
         </Card>);
 };
 MissionBar.propTypes = {
+    /**
+     * mapClick {Callback1<DOMEvent>} callback on map icon click
+     */
     mapClick: PropTypes.func,
+    /**
+     * userIconClick {Callback1<DOMEvent>} callback on user icon click
+     */
     userIconClick: PropTypes.func,
+    /**
+     * weatherClick {Callback1<DOMEvent>} callback on weather icon click
+     */
     weatherClick: PropTypes.func
 };
 export default MissionBar;

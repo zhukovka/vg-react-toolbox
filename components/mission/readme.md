@@ -10,11 +10,11 @@ MissionBar react component
 ```
 
 ### Properties
- `mapClick`  `func`     
+ `mapClick`  `func`    mapClick {Callback1<DOMEvent>} callback on map icon click 
 
- `userIconClick`  `func`     
+ `userIconClick`  `func`    userIconClick {Callback1<DOMEvent>} callback on user icon click 
 
- `weatherClick`  `func`     
+ `weatherClick`  `func`    weatherClick {Callback1<DOMEvent>} callback on weather icon click 
 
 
 ------------------------------------------------------------------
