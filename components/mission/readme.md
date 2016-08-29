@@ -10,11 +10,11 @@ MissionBar react component
 ```
 
 ### Properties
- `mapClick`  `func`    mapClick {Callback1<DOMEvent>} callback on map icon click 
+ `mapClick`  `func`    `mapClick {Callback1<DOMEvent>} callback on map icon click` 
 
- `userIconClick`  `func`    userIconClick {Callback1<DOMEvent>} callback on user icon click 
+ `userIconClick`  `func`    `userIconClick {Callback1<DOMEvent>} callback on user icon click` 
 
- `weatherClick`  `func`    weatherClick {Callback1<DOMEvent>} callback on weather icon click 
+ `weatherClick`  `func`    `weatherClick {Callback1<DOMEvent>} callback on weather icon click` 
 
 
 ------------------------------------------------------------------
@@ -31,7 +31,7 @@ PlayerPanel react component
 ```
 
 ### Properties
- `children`  `any`    Children to pass through the component. 
+ `children`  `any`    `Children to pass through the component.` 
 
  `expand`  `func`     
 
@@ -52,7 +52,7 @@ UsersPanel react component
 ```
 
 ### Properties
- `children`  `any`    Children to pass through the component. 
+ `children`  `any`    `Children to pass through the component.` 
 
  `onClick`  `func`     
 
