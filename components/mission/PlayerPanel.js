@@ -3,8 +3,8 @@ import {Panel} from 'react-toolbox';
 import VideoPanel from 'react-toolbox-addons/lib/videopanel';
 
 const PlayerPanel = ({children, expand, fullscreen})=> {
-    const video = Array.isArray(children) ? children.shift() : children;
-    const _children = Array.isArray(children) ? children : null;
+    const video = Array.isArray(children) ? children[0] : children;
+    const _children = Array.isArray(children) ? children.slice(1) : null;
     return (
         <Panel>
             <VideoPanel
