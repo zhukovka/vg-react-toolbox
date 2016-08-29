@@ -5,5 +5,5 @@ export OrgMainInfoForm from './organizationforms/OrgMainInfoForm';
 export HardWareForm from './hardwareform/HardWareForm';
 export OrgFormSteps from './organizationforms/OrgFormSteps';
 export MissionBar from './mission/MissionBar';
-export UserPanel from './mission/UsersPanel';
+export UsersPanel from './mission/UsersPanel';
 export PlayerPanel from './mission/PlayerPanel';
