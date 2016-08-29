@@ -4,9 +4,9 @@
 
 | Name          | Type    | Default  | Description|
 |:-----|:-----|:-----|:-----|
-| `userIconClick` | `Callback1\<DOMEvent/>`  | `undefined`     | callback for user icon click|
-| `weatherClick`     | `Callback1\<DOMEvent/>`    | `undefined`  | callback for weather icon click|
-| `mapClick`      | `Callback1\<DOMEvent/>`    | `undefined`  | callback for map icon click|
+| `userIconClick` | `Callback1<DOMEvent>`  | `undefined`     | callback for user icon click|
+| `weatherClick`     | `Callback1<DOMEvent>`    | `undefined`  | callback for weather icon click|
+| `mapClick`      | `Callback1<DOMEvent>`    | `undefined`  | callback for map icon click|
 
 
 
@@ -19,7 +19,7 @@ extends NawDrawer from [Layout](http://react-toolbox.com/#/components/layout)
 | Name          | Type    | Default  | Description|
 |:-----|:-----|:-----|:-----|
 | `open` | `Boolean`  | `undefined`     | determine if the user panel is open|
-| `onClick`     | `Callback1\<DOMEvent/>`    | `undefined`  | callback for close icon click|
+| `onClick`     | `Callback1<DOMEvent>`    | `undefined`  | callback for close icon click|
 
 # PlayerPanel 
 
@@ -29,8 +29,8 @@ extends Panel from [Layout](http://react-toolbox.com/#/components/layout)
 
 | Name          | Type    | Default  | Description|
 |:-----|:-----|:-----|:-----|
-| `expand`     | `Callback1\<DOMEvent/>`    | `undefined`  | callback for expand icon click|
-| `fullscreen`     | `Callback1\<DOMEvent/>`    | `undefined`  | callback for fullscreen icon click|
+| `expand`     | `Callback1<DOMEvent>`    | `undefined`  | callback for expand icon click|
+| `fullscreen`     | `Callback1<DOMEvent>`    | `undefined`  | callback for fullscreen icon click|
 
 # SideBarPlus 
 
