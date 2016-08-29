@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {AppBar, Checkbox, IconButton, Layout, NavDrawer, Panel, Sidebar} from 'react-toolbox';
-import MissionLayout from '../../components/mission/MissionLayout';
+import MissionBar from '../../components/mission/MissionBar';
 class MissionPageTest extends Component {
 
     render () {
@@ -8,7 +8,7 @@ class MissionPageTest extends Component {
 
         return (
             <section>
-                <MissionLayout/>
+                <MissionBar/>
             </section>
         );
     }

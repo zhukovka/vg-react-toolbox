@@ -2,7 +2,7 @@ import React, {PropTypes} from 'react';
 import {Card} from 'react-toolbox/lib/card';
 import CardActionsSpaced from 'react-toolbox-addons/lib/cardactionsspaced';
 import {IconButton} from 'react-toolbox/lib/button';
-import ButtonGroup from 'react-toolbox-addons/lib/buttongroup';
+import ButtonGroup from 'react-toolbox-addons/lib/buttongroup/ButtonGroup';
 
 const MissionBar = ({userIconClick, weatherClick, mapClick})=> {
     return (
