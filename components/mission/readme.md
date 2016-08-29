@@ -1,7 +1,7 @@
 ## MissionBar `<MissionBar/>`
 
 ```
-MissionBar react element
+MissionBar react component
 @param userIconClick {Callback1<DOMEvent>} callback on user icon click
 @param weatherClick {Callback1<DOMEvent>} callback on weather icon click
 @param mapClick {Callback1<DOMEvent>} callback on map icon click
@@ -22,10 +22,10 @@ MissionBar react element
 ## PlayerPanel `<PlayerPanel/>`
 
 ```
-PlayerPanel react element
-@param children
-@param expand
-@param fullscreen
+PlayerPanel react component
+@param children {array|object|node}
+@param expand {Callback1<DOMEvent>} callback on expand icon click
+@param fullscreen {Callback1<DOMEvent>} callback on fullscreen icon click
 @returns {JSX}
 @constructor 
 ```
@@ -41,6 +41,15 @@ PlayerPanel react element
 ------------------------------------------------------------------
 
 ## UsersPanel `<UsersPanel/>`
+
+```
+UsersPanel react component
+@param children {array|object|node}
+@param open {Boolean} property to indicate if the panel is open
+@param onClick {Callback1<DOMEvent>} callback on close icon click
+@returns {XML}
+@constructor 
+```
 
 ### Properties
  `children`  `any`    Children to pass through the component. 
