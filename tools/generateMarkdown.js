@@ -36,7 +36,7 @@ function generateProp (propName, prop) {
         ` \`${propName}\` ${prop.required ? '(required)' : ''}`
         + ` ${(prop.type ? generatePropType(prop.type) : '')} `
         + ` ${(prop.defaultValue ? `\`${prop.defaultValue}\`` : '')} `
-        + ` ${(prop.description ? prop.description : '')} `
+        + ` ${(prop.description ? `\`${prop.description}\`` : '')} `
         + '\n'
     );
 }
