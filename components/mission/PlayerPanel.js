@@ -24,7 +24,13 @@ const PlayerPanel = ({children, expand, fullscreen})=> {
 };
 PlayerPanel.propTypes = {
     children: PropTypes.any,
+    /**
+     * expand {Callback1<DOMEvent>} callback on expand icon click
+     */
     expand: PropTypes.func,
+    /**
+     * fullscreen {Callback1<DOMEvent>} callback on fullscreen icon click
+     */
     fullscreen: PropTypes.func
 };
 export default PlayerPanel;

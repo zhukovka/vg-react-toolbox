@@ -33,9 +33,9 @@ PlayerPanel react component
 ### Properties
  `children`  `any`    `Children to pass through the component.` 
 
- `expand`  `func`     
+ `expand`  `func`    `expand {Callback1<DOMEvent>} callback on expand icon click` 
 
- `fullscreen`  `func`     
+ `fullscreen`  `func`    `fullscreen {Callback1<DOMEvent>} callback on fullscreen icon click` 
 
 
 ------------------------------------------------------------------
@@ -54,9 +54,9 @@ UsersPanel react component
 ### Properties
  `children`  `any`    `Children to pass through the component.` 
 
- `onClick`  `func`     
+ `onClick`  `func`    `open {Boolean} property to indicate if the panel is open` 
 
- `open`  `bool`     
+ `open`  `bool`    `onClick {Callback1<DOMEvent>} callback on close icon click` 
 
 
 ------------------------------------------------------------------

@@ -17,7 +17,13 @@ const UsersPanel = ({children, open, onClick})=> {
 };
 UsersPanel.propTypes = {
     children: PropTypes.any,
+    /**
+     * open {Boolean} property to indicate if the panel is open
+     */
     onClick: PropTypes.func,
+    /**
+     * onClick {Callback1<DOMEvent>} callback on close icon click
+     */
     open: PropTypes.bool
 };
 export default UsersPanel;
