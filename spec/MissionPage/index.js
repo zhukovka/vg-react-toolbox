@@ -28,7 +28,7 @@ class MissionPageTest extends Component {
                     </div>
                 );
             default:
-                return <div>Empty</div>
+                return <div>Empty</div>;
         }
     }
 

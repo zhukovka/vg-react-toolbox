@@ -9,7 +9,7 @@ const UserPanel = ({children, open, onClick})=> {
 };
 UserPanel.propTypes = {
     children: PropTypes.any,
-    open: PropTypes.bool,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    open: PropTypes.bool
 };
 export default UserPanel;
