@@ -1,4 +1,11 @@
 import {InputProps} from "../input";
+/**
+ * street: InputProps;
+ * city: InputProps;
+ * state: InputProps;
+ * postcode: InputProps;
+ * country: InputProps;
+ */
 interface Address {
     street: InputProps;
     city: InputProps;
@@ -6,6 +13,11 @@ interface Address {
     postcode: InputProps;
     country: InputProps;
 }
+/**
+ * name: InputProps;
+ * id: InputProps;
+ * address: Address;
+ */
 class MainInfo {
     name: InputProps;
     id: InputProps;

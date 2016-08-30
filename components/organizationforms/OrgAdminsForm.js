@@ -1,11 +1,9 @@
 import React, {PropTypes} from 'react';
 import VGComponentForm from '../vgcomponentform';
-import {CardActionsSpaced} from 'react-toolbox-addons/lib/cardactionsspaced';
-import ButtonGroup from 'react-toolbox-addons/lib/buttongroup/ButtonGroup';
-import {Button} from 'react-toolbox/lib/button';
 import {Row} from 'react-toolbox-addons/lib/grid';
 import Admins from '../classes/Admins';
 import FormActionsBack from '../classes/FormActionsBack';
+import ActionsBack from '../actions/ActionsBack';
 
 class OrgAdminsForm extends VGComponentForm {
     static propTypes = {
@@ -21,7 +19,6 @@ class OrgAdminsForm extends VGComponentForm {
 
     renderFormContent () {
         const {firstname, lastname, email, phone, title, notes} = this.props.info;
-        const {back, cancel, finish} = this.props.orgActions;
         return (
             <fieldset>
                 <Row expanded>
@@ -31,13 +28,7 @@ class OrgAdminsForm extends VGComponentForm {
                     {this.renderInput(title, {small: 12, medium: 12, large: 12})}
                     {this.renderInput(notes, {small: 12, medium: 12, large: 12})}
                 </Row>
-                <CardActionsSpaced>
-                    <Button {...back}/>
-                    <ButtonGroup>
-                        <Button {...cancel}/>
-                        <Button {...finish}/>
-                    </ButtonGroup>
-                </CardActionsSpaced>
+                <ActionsBack actions={this.props.orgActions}/>
             </fieldset>
         );
     }

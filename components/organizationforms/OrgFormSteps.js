@@ -1,7 +1,6 @@
 import React, {PropTypes} from 'react';
 import StepsList from 'react-toolbox-addons/lib/stepslist';
 import {Card} from 'react-toolbox/lib/card';
-import Step from '../classes/Step';
 
 const OrgFormSteps = (props)=> {
     return (
@@ -14,7 +13,11 @@ const OrgFormSteps = (props)=> {
 };
 
 OrgFormSteps.propTypes = {
-    steps: PropTypes.arrayOf(Step)
+    steps: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        active: PropTypes.bool,
+        done: PropTypes.bool
+    }))
 };
 
 export default OrgFormSteps;

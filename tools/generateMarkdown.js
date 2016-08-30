@@ -11,16 +11,16 @@ function generateDesciption (description) {
 function generatePropType (type) {
     let values;
     if (Array.isArray(type.value)) {
-        values = '(`'
+        values = '('
             + type.value.map(function (typeValue) {
                 return typeValue.name || typeValue.value;
-            }).join('`,`')
-            + '`)';
+            }).join(',')
+            + ')';
     } else {
         values = type.value;
     }
 
-    return `\`${type.name}\`${(values ? values : '')}`;
+    return `${type.name} ${(values ? values : '')}`;
 }
 
 function generateProp (propName, prop) {
@@ -31,14 +31,15 @@ function generateProp (propName, prop) {
             prop.description = 'Children to pass through the component.';
         }
     }
-
-    return (
-        ` \`${propName}\` ${prop.required ? '(required)' : ''}`
-        + ` ${(prop.type ? generatePropType(prop.type) : '')} `
-        + ` ${(prop.defaultValue ? `\`${prop.defaultValue}\`` : '')} `
-        + ` ${(prop.description ? `\`${prop.description}\`` : '')} `
-        + '\n'
-    );
+    const type = prop.type ? generatePropType(prop.type) : '';
+    const defaultValue = (prop.defaultValue ? '@default' + prop.defaultValue : '');
+    const req = prop.required ? '(required)' : '';
+    if (prop.description) {
+        return (`${prop.description} ${req}  
+                 ${defaultValue}\n`);
+    }
+    return (`${propName} ${req} ${type}
+             ${defaultValue}\n`);
 }
 
 function generateProps (props) {
@@ -46,9 +47,10 @@ function generateProps (props) {
 
     return (
         `${title}\n`
+        + '\`\`\`\n'
         + Object.keys(props).sort().map(propName => {
             return generateProp(propName, props[propName]);
-        }).join('\n')
+        }).join('\n') + '\`\`\`\n'
     );
 }
 

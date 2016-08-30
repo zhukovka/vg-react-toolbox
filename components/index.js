@@ -7,3 +7,7 @@ export OrgFormSteps from './organizationforms/OrgFormSteps';
 export MissionBar from './mission/MissionBar';
 export UsersPanel from './mission/UsersPanel';
 export PlayerPanel from './mission/PlayerPanel';
+export Logo from './logo/Logo';
+export Summary from './summary/Summary';
+export MainInfoSummary from './summary/MainInfoSummary';
+export ActionsBack from './actions/ActionsBack';

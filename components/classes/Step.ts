@@ -1,8 +1,6 @@
-//noinspection UnterminatedStatementJS
-interface Step{
+class Step {
     name: string;
-    active?: boolean;
-    done?: boolean;
+    active: boolean;
+    done: boolean;
 }
-
 export default Step;

@@ -8,6 +8,9 @@ import FormActions from '../classes/FormActions';
 import {Upload} from 'react-toolbox-addons/lib/upload-zone';
 
 class HardWareForm extends VGComponentForm {
+    /**
+     * @type {{hardwareActions: Requireable<any>, info: Requireable<any>, onUpload: Requireable<any>}}
+     */
     static propTypes = {
         hardwareActions: PropTypes.instanceOf(FormActions),
         info: PropTypes.instanceOf(HardwareFields),
