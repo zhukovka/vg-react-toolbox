@@ -19,12 +19,12 @@ class HardWareForm extends VGComponentForm {
 
     constructor (props) {
         super(props);
-        const {type, manufacturer, model, uid} = this.props.info;
-        this.state = this.setInitialState([type, manufacturer, model, uid]);
+        const {type, manufacturer, model, uid, port} = this.props.info;
+        this.state = this.setInitialState([type, manufacturer, model, uid, port]);
     }
 
     renderFormContent () {
-        const {type, manufacturer, model, uid} = this.props.info;
+        const {type, manufacturer, model, uid, port} = this.props.info;
         const {cancel, finish} = this.props.hardwareActions;
         return (
             <fieldset>
@@ -32,6 +32,7 @@ class HardWareForm extends VGComponentForm {
                 <Row expanded>
                     {this.renderDropDowns([type, manufacturer, model])}
                     {this.renderInput(uid)}
+                    {this.renderInput(port)}
                 </Row>
                 <CardActionsRight>
                         <Button {...cancel}/>
