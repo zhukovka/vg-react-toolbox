@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {Layout} from 'react-toolbox';
-import {List, ListItem} from 'react-toolbox/lib/list';
+import {List, ListCheckbox} from 'react-toolbox/lib/list';
+import {Button} from 'react-toolbox/lib/button';
 import MissionBar from '../../components/mission/MissionBar';
 import UsersPanel from '../../components/mission/UsersPanel';
 import PlayerPanel from '../../components/mission/PlayerPanel';
@@ -54,20 +55,22 @@ class MissionPageTest extends Component {
         };
 
         return (
-            <section>
+            <div>
                 <MissionBar {...missionBarProps}/>
                 <Layout>
                     <UsersPanel open={this.state.usersPanelOpen} onClick={(e)=> {
                             this.setState({usersPanelOpen: !this.state.usersPanelOpen});
                         }} addUser={()=>console.log('kuku')}>
                         <List selectable ripple>
-                            <ListItem
-                                avatar='https://dl.dropboxusercontent.com/u/2247264/assets/m.jpg'
-                                caption='Dr. Manhattan'
-                                legend="Jonathan 'Jon' Osterman"
-                                rightIcon='star'
-                            />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+
                         </List>
+                        <Button label='BACK TO ORANIZATION LIST' primary />
+                        <Button label='VIEW ORANIZATION PAGE' primary />
                     </UsersPanel>
                     <PlayerPanel
                         expand={()=>this.setState({sidePanelOpen: !this.state.sidePanelOpen && !this.state.usersPanelOpen, usersPanelOpen: !this.state.sidePanelOpen && !this.state.usersPanelOpen})}>
@@ -82,7 +85,7 @@ class MissionPageTest extends Component {
                         {this.renderSidePanelContent(this.state.sidePanelTitle)}
                     </SidebarPlus>
                 </Layout>
-            </section>
+            </div>
         );
     }
 

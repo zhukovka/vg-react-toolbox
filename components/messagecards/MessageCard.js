@@ -27,15 +27,18 @@ const MessageCard = ({image, message, title, children})=> {
 MessageCard.propTypes = {
     children: PropTypes.any,
     /**
-     * <String> image - url to use as the logo
+     * url to use as the logo
+     * <String> image
      */
     image: PropTypes.string,
     /**
-     * <String> message - message to show as a card text
+     * message to show as a card text
+     * <String> message
      */
     message: PropTypes.string,
     /**
-     * <String> title - card title
+     * card title
+     * <String> title
      */
     title: PropTypes.string
 };

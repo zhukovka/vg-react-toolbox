@@ -7,17 +7,17 @@ MessageCard
 
 ### Properties
 ```
-children <any> - Children to pass through the component.   
-                 
+ /** Children to pass through the component.
+<any> children   */ 
 
-<String> image - url to use as the logo   
-                 
+ /** url to use as the logo
+<String> image   */ 
 
-<String> message - message to show as a card text   
-                 
+ /** message to show as a card text
+<String> message   */ 
 
-<String> title - card title   
-                 
+ /** card title
+<String> title   */ 
 ```
 
 

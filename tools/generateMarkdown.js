@@ -22,22 +22,25 @@ function generatePropType (type) {
 
     return `${type.name}${(values ? values : '')}`;
 }
-
+function generateJdoc (description, required, defaultValue) {
+    let descr = description.split(/\n/);
+    return (` /** ${descr} ${required} ${defaultValue} */ \n`);
+}
 function generateProp (propName, prop) {
     const type = prop.type ? generatePropType(prop.type) : '';
     if (!prop.description) {
         let nameType = `<${type}> ${propName}`;
         if (propName === 'className') {
-            prop.description = nameType + ' - Additional class(es) for custom styling.';
+            prop.description = `Additional class(es) for custom styling.\n${nameType}`;
         } else if (propName === 'children') {
-            prop.description = nameType + ' - Children to pass through the component.';
+            prop.description = `Children to pass through the component.\n${nameType}`;
         }
     }
     const defaultValue = (prop.defaultValue ? '@default' + prop.defaultValue : '');
     const req = prop.required ? '(required)' : '';
     if (prop.description) {
-        return (`${prop.description} ${req}  
-                 ${defaultValue}\n`);
+        let generateJdoc2 = generateJdoc(prop.description, req, defaultValue);
+        return generateJdoc2;
     }
     return (`${propName} ${req} ${type}
              ${defaultValue}\n`);
