@@ -59,7 +59,7 @@ class MissionPageTest extends Component {
                 <Layout>
                     <UsersPanel open={this.state.usersPanelOpen} onClick={(e)=> {
                             this.setState({usersPanelOpen: !this.state.usersPanelOpen});
-                        }}>
+                        }} addUser={()=>console.log('kuku')}>
                         <List selectable ripple>
                             <ListItem
                                 avatar='https://dl.dropboxusercontent.com/u/2247264/assets/m.jpg'

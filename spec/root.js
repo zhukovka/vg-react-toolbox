@@ -7,7 +7,7 @@ import OrgMainInfoForm from './OrgMainInfoForm/index';
 import OrgAccountInfoForm from './OrgAccountInfoForm/index';
 import OrgAdminsForm from './OrgAdminsForm/index';
 import Summary from './Summary';
-
+import MessageCard from './MessageCard';
 const Root = () => (
     <div className={style.app}>
         <h1>VG React Toolbox
@@ -19,6 +19,7 @@ const Root = () => (
         <OrgAccountInfoForm/>
         <OrgAdminsForm/>
         <Summary/>
+        <MessageCard/>
     </div>
 );
 
