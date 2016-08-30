@@ -26,7 +26,7 @@ function generatePropType (type) {
 function generateProp (propName, prop) {
     const type = prop.type ? generatePropType(prop.type) : '';
     if (!prop.description) {
-        let nameType = `${propName} <${type}>`;
+        let nameType = `<${type}> ${propName}`;
         if (propName === 'className') {
             prop.description = nameType + ' - Additional class(es) for custom styling.';
         } else if (propName === 'children') {

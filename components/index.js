@@ -11,3 +11,4 @@ export Logo from './logo/Logo';
 export Summary from './summary/Summary';
 export MainInfoSummary from './summary/MainInfoSummary';
 export ActionsBack from './actions/ActionsBack';
+export MessageCard from './messagecards/MessageCard';

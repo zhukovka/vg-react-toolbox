@@ -10,7 +10,7 @@ import {Row, Col} from 'react-toolbox-addons/lib/grid';
 const Logo = ({aspectRatio, ...other})=> {
     return (
         <Row align="center" expanded>
-            <Col small={4} medium={3} large={2} style={{marginTop: 20}}>
+            <Col small={4} medium={3} large={2}>
                 <CardMedia {...other} aspectRatio="square"/>
             </Col>
         </Row>

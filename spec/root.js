@@ -20,6 +20,9 @@ const Root = () => (
         <OrgAdminsForm/>
         <Summary/>
         <MessageCard/>
+        <section>
+            <h5>THE END</h5>
+        </section>
     </div>
 );
 

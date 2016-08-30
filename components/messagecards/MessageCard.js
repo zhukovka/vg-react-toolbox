@@ -5,7 +5,7 @@ import {CardMediaPrimary} from 'react-toolbox-addons/lib/card-addons';
 
 /**
  *  MessageCard
- *  example in example.md (https://github.com/zhukovka/vg-react-toolbox/tree/master/components/messagecard)
+ *  see example in example.md (https://github.com/zhukovka/vg-react-toolbox/blob/master/components/messagecards/example.md)
  */
 const MessageCard = ({image, message, title, children})=> {
     return (
