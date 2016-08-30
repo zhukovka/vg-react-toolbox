@@ -1,20 +1,20 @@
 ## MissionBar `<MissionBar/>`
 
 ```
-MissionBar react component
-@param userIconClick {Callback1<DOMEvent>} callback on user icon click
-@param weatherClick {Callback1<DOMEvent>} callback on weather icon click
-@param mapClick {Callback1<DOMEvent>} callback on map icon click
-@returns {JSX}
-@constructor 
+MissionBar react component 
 ```
 
 ### Properties
- `mapClick`  `func`    `mapClick {Callback1<DOMEvent>} callback on map icon click` 
+```
+Callback1<DOMEvent> mapClick - callback on map icon click   
+                 
 
- `userIconClick`  `func`    `userIconClick {Callback1<DOMEvent>} callback on user icon click` 
+Callback1<DOMEvent> userIconClick - callback on user icon click   
+                 
 
- `weatherClick`  `func`    `weatherClick {Callback1<DOMEvent>} callback on weather icon click` 
+Callback1<DOMEvent> weatherClick - callback on weather icon click   
+                 
+```
 
 
 ------------------------------------------------------------------
@@ -22,20 +22,20 @@ MissionBar react component
 ## PlayerPanel `<PlayerPanel/>`
 
 ```
-PlayerPanel react component
-@param children {array|object|node}
-@param expand {Callback1<DOMEvent>} callback on expand icon click
-@param fullscreen {Callback1<DOMEvent>} callback on fullscreen icon click
-@returns {JSX}
-@constructor 
+PlayerPanel react component 
 ```
 
 ### Properties
- `children`  `any`    `Children to pass through the component.` 
+```
+children <any> - Children to pass through the component.   
+                 
 
- `expand`  `func`    `expand {Callback1<DOMEvent>} callback on expand icon click` 
+Callback1<DOMEvent> expand - callback on expand icon click   
+                 
 
- `fullscreen`  `func`    `fullscreen {Callback1<DOMEvent>} callback on fullscreen icon click` 
+Callback1<DOMEvent> fullscreen - callback on fullscreen icon click   
+                 
+```
 
 
 ------------------------------------------------------------------
@@ -43,20 +43,23 @@ PlayerPanel react component
 ## UsersPanel `<UsersPanel/>`
 
 ```
-UsersPanel react component
-@param children {array|object|node}
-@param open {Boolean} property to indicate if the panel is open
-@param onClick {Callback1<DOMEvent>} callback on close icon click
-@returns {XML}
-@constructor 
+UsersPanel react component 
 ```
 
 ### Properties
- `children`  `any`    `Children to pass through the component.` 
+```
+Callback1<DOMEvent> addUser - callback on user icon click   
+                 
 
- `onClick`  `func`    `open {Boolean} property to indicate if the panel is open` 
+children <any> - Children to pass through the component.   
+                 
 
- `open`  `bool`    `onClick {Callback1<DOMEvent>} callback on close icon click` 
+<Boolean> open - property to indicate if the panel is open   
+                 
+
+<Callback1<DOMEvent>> - onClick callback on close icon click   
+                 
+```
 
 
 ------------------------------------------------------------------

@@ -13,7 +13,7 @@ const UsersPanel = ({children, open, onClick, addUser})=> {
 };
 UsersPanel.propTypes = {
     /**
-     * Callback1<DOMEvent> addUser - callback on close icon click
+     * Callback1<DOMEvent> addUser - callback on user icon click
      */
     addUser: PropTypes.func,
     children: PropTypes.any,

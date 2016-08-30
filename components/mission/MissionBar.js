@@ -6,11 +6,6 @@ import ButtonGroup from 'react-toolbox-addons/lib/buttongroup/ButtonGroup';
 
 /**
  * MissionBar react component
- * @param userIconClick {Callback1<DOMEvent>} callback on user icon click
- * @param weatherClick {Callback1<DOMEvent>} callback on weather icon click
- * @param mapClick {Callback1<DOMEvent>} callback on map icon click
- * @returns {JSX}
- * @constructor
  */
 const MissionBar = ({userIconClick, weatherClick, mapClick})=> {
     return (
@@ -26,15 +21,15 @@ const MissionBar = ({userIconClick, weatherClick, mapClick})=> {
 };
 MissionBar.propTypes = {
     /**
-     * mapClick {Callback1<DOMEvent>} callback on map icon click
+     * Callback1<DOMEvent> mapClick - callback on map icon click
      */
     mapClick: PropTypes.func,
     /**
-     * userIconClick {Callback1<DOMEvent>} callback on user icon click
+     * Callback1<DOMEvent> userIconClick - callback on user icon click
      */
     userIconClick: PropTypes.func,
     /**
-     * weatherClick {Callback1<DOMEvent>} callback on weather icon click
+     * Callback1<DOMEvent> weatherClick - callback on weather icon click
      */
     weatherClick: PropTypes.func
 };

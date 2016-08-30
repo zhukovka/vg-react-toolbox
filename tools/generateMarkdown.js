@@ -20,18 +20,19 @@ function generatePropType (type) {
         values = type.value;
     }
 
-    return `${type.name} ${(values ? values : '')}`;
+    return `${type.name}${(values ? values : '')}`;
 }
 
 function generateProp (propName, prop) {
+    const type = prop.type ? generatePropType(prop.type) : '';
     if (!prop.description) {
+        let nameType = `${propName} <${type}>`;
         if (propName === 'className') {
-            prop.description = 'Additional class(es) for custom styling.';
+            prop.description = nameType + ' - Additional class(es) for custom styling.';
         } else if (propName === 'children') {
-            prop.description = 'Children to pass through the component.';
+            prop.description = nameType + ' - Children to pass through the component.';
         }
     }
-    const type = prop.type ? generatePropType(prop.type) : '';
     const defaultValue = (prop.defaultValue ? '@default' + prop.defaultValue : '');
     const req = prop.required ? '(required)' : '';
     if (prop.description) {
