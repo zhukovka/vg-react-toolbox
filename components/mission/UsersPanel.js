@@ -3,26 +3,26 @@ import NavDrawerPlus from 'react-toolbox-addons/lib/nawdrawerplus';
 
 /**
  * UsersPanel react component
- * @param children {array|object|node}
- * @param open {Boolean} property to indicate if the panel is open
- * @param onClick {Callback1<DOMEvent>} callback on close icon click
- * @returns {XML}
- * @constructor
  */
-const UsersPanel = ({children, open, onClick})=> {
+const UsersPanel = ({children, open, onClick, addUser})=> {
+    const addUserBtn = {icon: 'person_add', addUser};
     return (
-        <NavDrawerPlus title="Users" active={open} pinned={open} onClick={onClick}>
+        <NavDrawerPlus title="Users" active={open} pinned={open} onClick={onClick} buttons={[addUserBtn]}>
             {children}
         </NavDrawerPlus>);
 };
 UsersPanel.propTypes = {
+    /**
+     * Callback1<DOMEvent> addUser - callback on close icon click
+     */
+    addUser: PropTypes.func,
     children: PropTypes.any,
     /**
-     * open {Boolean} property to indicate if the panel is open
+     * <Boolean> open - property to indicate if the panel is open
      */
     onClick: PropTypes.func,
     /**
-     * onClick {Callback1<DOMEvent>} callback on close icon click
+     * <Callback1<DOMEvent>> - onClick callback on close icon click
      */
     open: PropTypes.bool
 };
