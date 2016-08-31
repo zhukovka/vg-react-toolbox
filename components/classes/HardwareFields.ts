@@ -5,12 +5,14 @@ class HardwareFields {
     manufacturer:DropdownPlusProps;
     model:DropdownPlusProps;
     uid:InputProps;
+    port:InputProps;
 
-    constructor(type:DropdownPlusProps, manufacturer:DropdownPlusProps, model:DropdownPlusProps, uid:InputProps) {
+    constructor(type:DropdownPlusProps, manufacturer:DropdownPlusProps, model:DropdownPlusProps, uid:InputProps, port:InputProps) {
         this.type = type;
         this.manufacturer = manufacturer;
         this.model = model;
         this.uid = uid;
+        this.port = port;
     }
 }
 
