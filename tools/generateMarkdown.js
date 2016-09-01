@@ -23,7 +23,7 @@ function generatePropType (type) {
     return `${type.name}${(values ? values : '')}`;
 }
 function generateJdoc (description, required, defaultValue) {
-    let descr = description.split(/\n/)
+    let descr = description.split(/\n/);
     let comment = descr.slice(0, -1).join('\n*');
 
     return (`/**\n * ${comment} ${required} ${defaultValue}\n */\n${descr.pop()}\n`);
@@ -31,7 +31,7 @@ function generateJdoc (description, required, defaultValue) {
 function generateProp (propName, prop) {
     const type = prop.type ? generatePropType(prop.type) : '';
     if (!prop.description) {
-        let nameType = `<${type}> ${propName}`;
+        let nameType = `${type} ${propName}`;
         if (propName === 'className') {
             prop.description = `Additional class(es) for custom styling.\n${nameType}`;
         } else if (propName === 'children') {

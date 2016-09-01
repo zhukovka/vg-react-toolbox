@@ -12,22 +12,22 @@ class ProfileCard extends Component {
         children: PropTypes.any,
         /**
          * set the Card to edit mode
-         * <Boolean> editmode
+         * Boolean editmode
          */
         editmode: PropTypes.bool,
         /**
          * event handler for close icon click
-         * <Callback1<DOMEvent>> onClose
+         * Callback1<DOMEvent> onClose
          */
         onClose: PropTypes.func,
         /**
          * event handler for confirm(check) icon click
-         * <Callback1<DOMEvent>> onClose
+         * Callback1<DOMEvent> onClose
          */
         onConfirm: PropTypes.func,
         /**
          * event handler for edit(pencil) icon click
-         * <Callback1<DOMEvent>> onClose
+         * Callback1<DOMEvent> onClose
          */
         onEdit: PropTypes.func
     };
