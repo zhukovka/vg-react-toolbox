@@ -30,7 +30,7 @@ class ProfilePageTest extends Component {
                         />
                         <StyledInput disabled={!editmode} white type='text' name='name' value='Ololosha Piakina'/>
                     </ProfileTitle>
-                    
+
                     <StyledInput disabled={!editmode} type='text' label='name' name='name' value='Ololosha Piakina'/>
                     <StyledInput disabled={!editmode} type='text' label='name' name='name' value='Ololosha Piakina'/>
                     <StyledDropdown
