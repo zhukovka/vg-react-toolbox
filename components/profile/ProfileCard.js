@@ -5,7 +5,7 @@ import {CardTitlePrimary, CardTitleButtons} from 'react-toolbox-addons/lib/card-
 
 /**
  * ProfileCard
- * see example
+ * see example https://github.com/zhukovka/vg-react-toolbox/blob/master/components/profile/example.md
  */
 class ProfileCard extends Component {
     static propTypes = {
