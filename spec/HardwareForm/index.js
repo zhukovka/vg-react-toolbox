@@ -67,6 +67,23 @@ class HardwareFormTest extends Component {
                 }
             }
         };
+        const port = {
+            name: 'port',
+            key: 'port',
+            label: 'port',
+            value: '',
+            type: 'number',
+            onChange: (val)=> {
+                console.log(val);
+                if (val === 'TH-th') {
+                    manufacturer.error = 'beda';
+                    this.setState({isValid: false});
+                } else {
+                    manufacturer.error = null;
+                    this.setState({isValid: true});
+                }
+            }
+        };
         const model = {
             name: 'dd3',
             key: 'dd3',
@@ -96,7 +113,7 @@ class HardwareFormTest extends Component {
             }
         };
         this.actions = new FormActions(cancel, finish);
-        this.hardware = new HardwareFields(type, manufacturer, model, uid);
+        this.hardware = new HardwareFields(type, manufacturer, model, uid, port);
     }
 
 

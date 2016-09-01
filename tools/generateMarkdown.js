@@ -23,8 +23,10 @@ function generatePropType (type) {
     return `${type.name}${(values ? values : '')}`;
 }
 function generateJdoc (description, required, defaultValue) {
-    let descr = description.split(/\n/);
-    return (` /** ${descr} ${required} ${defaultValue} */ \n`);
+    let descr = description.split(/\n/)
+    let comment = descr.slice(0, -1).join('*');
+
+    return (` /** ${comment} ${required} ${defaultValue}*/\n${descr.pop()}\n`);
 }
 function generateProp (propName, prop) {
     const type = prop.type ? generatePropType(prop.type) : '';

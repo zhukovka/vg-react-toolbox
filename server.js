@@ -22,6 +22,9 @@ app.get('/', function (req, res) {
 app.get('/mission', function (req, res) {
   res.sendFile(path.join(__dirname, './spec/mission/index.html'));
 });
+app.get('/profile', function (req, res) {
+  res.sendFile(path.join(__dirname, './spec/profile/index.html'));
+});
 app.get('/favicon.ico', function (req, res) {
   res.sendFile(path.join(__dirname, './favicon.ico'));
 });
