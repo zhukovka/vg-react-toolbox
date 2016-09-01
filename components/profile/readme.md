@@ -25,12 +25,12 @@ Callback1<DOMEvent> onClose
 /**
  * event handler for confirm(check) icon click  
  */
-Callback1<DOMEvent> onClose
+Callback1<DOMEvent> onConfirm
 
 /**
  * event handler for edit(pencil) icon click  
  */
-Callback1<DOMEvent> onClose
+Callback1<DOMEvent> onEdit
 ```
 
 

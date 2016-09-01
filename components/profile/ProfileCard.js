@@ -22,12 +22,12 @@ class ProfileCard extends Component {
         onClose: PropTypes.func,
         /**
          * event handler for confirm(check) icon click
-         * Callback1<DOMEvent> onClose
+         * Callback1<DOMEvent> onConfirm
          */
         onConfirm: PropTypes.func,
         /**
          * event handler for edit(pencil) icon click
-         * Callback1<DOMEvent> onClose
+         * Callback1<DOMEvent> onEdit
          */
         onEdit: PropTypes.func
     };
