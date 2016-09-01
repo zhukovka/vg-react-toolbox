@@ -10,7 +10,7 @@ see example https://github.com/zhukovka/vg-react-toolbox/blob/master/components/
 /**
  * Children to pass through the component.  
  */
-any children
+Object children
 
 /**
  * set the Card to edit mode  
@@ -43,7 +43,7 @@ Callback1<DOMEvent> onClose
 /**
  * Children to pass through the component.  
  */
-any children
+Object children
 ```
 
 
