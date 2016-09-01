@@ -45,26 +45,6 @@ class ProfilePageTest extends Component {
                         label="label"
                     />
                 </ProfileCard>
-
-                <h5 style={{marginTop: 20}}>ProfileCard only title</h5>
-
-                <ProfileCard
-                    editmode={editmode}
-                    onEdit={()=>this.setState({editmode: !editmode})}
-                    onClose={()=>this.setState({editmode: false})}>
-                    <ProfileTitle>
-                        <StyledInput disabled={!editmode} white type='text' name='name' value='Ololosha Piakina'/>
-                    </ProfileTitle>
-                </ProfileCard>
-
-                <h5 style={{marginTop: 20}}>ProfileCard no title</h5>
-
-                <ProfileCard
-                    editmode={editmode}
-                    onEdit={()=>this.setState({editmode: !editmode})}
-                    onClose={()=>this.setState({editmode: false})}>
-                    <StyledInput disabled={!editmode} white type='text' name='name' value='Ololosha Piakina'/>
-                </ProfileCard>
             </div>
         );
     }
