@@ -10,8 +10,8 @@ module.exports = {
     entry: {
         // main: ['webpack-hot-middleware/client',
         //     './spec/index.js'],
-        // mission: ['webpack-hot-middleware/client',
-        //     './spec/mission/index.js'],
+        mission: ['webpack-hot-middleware/client',
+            './spec/mission/index.js'],
         profile: ['webpack-hot-middleware/client',
             './spec/profile/index.js']
     },
