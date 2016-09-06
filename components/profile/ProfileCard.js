@@ -41,7 +41,12 @@ class ProfileCard extends Component {
          * @default 2
          * int cols
          */
-        cols: PropTypes.oneOf([1, 2, 3, 4, 6])
+        cols: PropTypes.oneOf([1, 2, 3, 4, 6]),
+        /**
+         * style declaration for the card
+         * Map<String, String> style
+         */
+        style: PropTypes.object
     };
 
     constructor (props) {
@@ -77,12 +82,12 @@ class ProfileCard extends Component {
     }
 
     render () {
-        const {primary, cols} = this.props;
+        const {primary, cols, style} = this.props;
         const size = 12 / (cols || 2);
         const children = Children.toArray(this.props.children);
 
         return (
-            <Card>
+            <Card style={style}>
                 <CardTitleStyled primary={primary}>
                     {this.renderButtons()}
                     {children[0]}

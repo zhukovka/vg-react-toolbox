@@ -110,6 +110,14 @@ class ProfilePageTest extends Component {
                         value='EN-gb'
                         label="label"
                     />
+                    <StyledDropdown
+                        auto
+                        onChange={this.handleChange}
+                        source={countries}
+                        disabled={!editmode}
+                        value='EN-gb'
+                        label="label"
+                    />
                 </ProfileCard>
             </div>
         );
