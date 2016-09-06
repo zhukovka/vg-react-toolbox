@@ -1,7 +1,7 @@
 import React, {PropTypes, Component, Children} from 'react';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
 import {Card, CardText} from 'react-toolbox/lib/card';
-import {CardTitlePrimary, CardTitleButtons} from 'react-toolbox-addons/lib/card-addons';
+import {CardTitleStyled, CardTitleButtons} from 'react-toolbox-addons/lib/card-addons';
 
 /**
  * ProfileCard
@@ -29,7 +29,12 @@ class ProfileCard extends Component {
          * event handler for edit(pencil) icon click
          * Callback1<DOMEvent> onEdit
          */
-        onEdit: PropTypes.func
+        onEdit: PropTypes.func,
+        /**
+         * set to make header color primary
+         * Boolean primary
+         */
+        primary: PropTypes.bool
     };
 
     constructor (props) {
@@ -68,10 +73,10 @@ class ProfileCard extends Component {
         const children = Children.toArray(this.props.children);
         return (
             <Card>
-                <CardTitlePrimary>
+                <CardTitleStyled primary={this.props.primary}>
                     {this.renderButtons()}
                     {children[0]}
-                </CardTitlePrimary>
+                </CardTitleStyled>
                 <CardText>
                     <Row expanded>
                         {this.renderChildren(children.slice(1))}

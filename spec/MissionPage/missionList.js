@@ -8,8 +8,7 @@ import {Button, IconButton} from 'react-toolbox/lib/button';
 import {IconMenu, MenuItem, MenuDivider} from 'react-toolbox/lib/menu';
 import Table from 'react-toolbox/lib/table';
 import FontIcon from 'react-toolbox/lib/font_icon';
-import Input from 'react-toolbox/lib/input';
-import {StyledInput, StyledDropdown} from 'react-toolbox-addons/lib/input-addons';
+import {StyledInput} from 'react-toolbox-addons/lib/input-addons';
 const UserModel = {
     name: {type: String},
     twitter: {type: String},

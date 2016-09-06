@@ -19,7 +19,7 @@ class ProfilePageTest extends Component {
         const editmode = this.state.editmode;
         return (
             <div style={{padding: 20}}>
-                <ProfileCard
+                <ProfileCard primary
                     editmode={editmode}
                     onEdit={()=>this.setState({editmode: !editmode})}
                     onClose={()=>this.setState({editmode: false})}>
@@ -45,7 +45,7 @@ class ProfilePageTest extends Component {
 
                 <h5 style={{marginTop: 20}}>ProfileCard only title</h5>
 
-                <ProfileCard
+                <ProfileCard primary
                     editmode={editmode}
                     onEdit={()=>this.setState({editmode: !editmode})}
                     onClose={()=>this.setState({editmode: false})}>
@@ -60,7 +60,7 @@ class ProfilePageTest extends Component {
                     editmode={editmode}
                     onEdit={()=>this.setState({editmode: !editmode})}
                     onClose={()=>this.setState({editmode: false})}>
-                    <StyledInput disabled={!editmode} white type='text' name='name' value='Ololosha Piakina'/>
+                    <StyledInput disabled={!editmode} type='text' name='name' value='Ololosha Piakina'/>
                 </ProfileCard>
             </div>
         );
