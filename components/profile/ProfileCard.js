@@ -34,7 +34,14 @@ class ProfileCard extends Component {
          * set to make header color primary
          * Boolean primary
          */
-        primary: PropTypes.bool
+        primary: PropTypes.bool,
+        /**
+         * set number of columns to render
+         * possible values 1, 2, 3, 4, 6
+         * @default 2
+         * int cols
+         */
+        cols: PropTypes.oneOf([1, 2, 3, 4, 6])
     };
 
     constructor (props) {
@@ -60,26 +67,29 @@ class ProfileCard extends Component {
         return (<CardTitleButtons buttons={buttons}/>);
     }
 
-    renderChildren (fields) {
+    renderChildren (fields, sizes = {small: 12, medium: 6, large: 6}) {
         return fields.map((field, index)=> {
             return (
-                <Col key={`col-${index}`} small={12} medium={6} large={6}>
+                <Col key={`col-${index}`} {...sizes}>
                     {field}
                 </Col>);
         });
     }
 
     render () {
+        const {primary, cols} = this.props;
+        const size = 12 / (cols || 2);
         const children = Children.toArray(this.props.children);
+
         return (
             <Card>
-                <CardTitleStyled primary={this.props.primary}>
+                <CardTitleStyled primary={primary}>
                     {this.renderButtons()}
                     {children[0]}
                 </CardTitleStyled>
                 <CardText>
                     <Row expanded>
-                        {this.renderChildren(children.slice(1))}
+                        {this.renderChildren(children.slice(1), {small: 12, medium: size, large: size})}
                     </Row>
                 </CardText>
             </Card>);

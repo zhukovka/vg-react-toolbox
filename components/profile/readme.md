@@ -13,6 +13,13 @@ see example https://github.com/zhukovka/vg-react-toolbox/blob/master/components/
 Object children
 
 /**
+ * set number of columns to render
+*possible values 1, 2, 3, 4, 6
+*@default 2  
+ */
+int cols
+
+/**
  * set the Card to edit mode  
  */
 Boolean editmode
