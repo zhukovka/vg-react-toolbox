@@ -12,3 +12,5 @@ export Summary from './summary/Summary';
 export MainInfoSummary from './summary/MainInfoSummary';
 export ActionsBack from './actions/ActionsBack';
 export MessageCard from './messagecards/MessageCard';
+export ProfileTitle from './profile/ProfileTitle';
+export ProfileCard from './profile/ProfileCard';
