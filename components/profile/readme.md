@@ -31,6 +31,11 @@ Callback1<DOMEvent> onConfirm
  * event handler for edit(pencil) icon click  
  */
 Callback1<DOMEvent> onEdit
+
+/**
+ * set to make header color primary  
+ */
+Boolean primary
 ```
 
 
