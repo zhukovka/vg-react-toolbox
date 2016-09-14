@@ -2,7 +2,7 @@
   "name": "vg-react-toolbox",
   "description": "react toolbox components for VG",
   "homepage": "https://github.com/zhukovka/vg-react-toolbox#readme",
-  "version": "1.0.38",
+  "version": "1.0.39",
   "main": "./lib",
   "author": "",
   "repository": {
@@ -22,7 +22,7 @@
     "react-css-themr": "^1.1.2",
     "react-dom": "^15.3.0",
     "react-toolbox": "^1.2.1",
-    "react-toolbox-addons": "^1.1.18"
+    "react-toolbox-addons": "^1.1.19"
   },
   "devDependencies": {
     "autoprefixer": "^6.3.6",
