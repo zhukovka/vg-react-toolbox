@@ -4,6 +4,14 @@
 body {
   background: $body-bg;
   color: $body-text-color;
+  & > * {
+    &::-webkit-scrollbar {
+      background: inherit;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $scrollbar-thumb-color; // rgba(0,0,0,.5);
+    }
+  }
 }
 
 [class*="vg-side-navigation"] {
@@ -14,4 +22,14 @@ td, th, input {
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
+}
+
+.vg-styled-scrollbar {
+  overflow: auto;
+  &::-webkit-scrollbar {
+    background-color: inherit;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: $scrollbar-thumb-color;
+  }
 }
