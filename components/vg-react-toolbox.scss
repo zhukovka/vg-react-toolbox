@@ -23,13 +23,3 @@ td, th, input {
   -webkit-font-smoothing: antialiased;
   text-size-adjust: 100%;
 }
-
-.vg-styled-scrollbar {
-  overflow: auto;
-  &::-webkit-scrollbar {
-    background-color: inherit;
-  }
-  &::-webkit-scrollbar-thumb {
-    background-color: $scrollbar-thumb-color;
-  }
-}

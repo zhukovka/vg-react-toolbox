@@ -8,7 +8,7 @@ const UsersPanel = ({children, open, onClick, addUser, style})=> {
     const addUserBtn = {icon: 'person_add', onClick: addUser};
     return (
         <NavDrawerPlus title="Users" active={open} pinned={open} onClick={onClick} buttons={[addUserBtn]} className='usersPanel'>
-            <div style={{overflow: 'auto', ...style}} className="vg-styled-scrollbar">
+            <div style={{overflow: 'auto', ...style}}>
               {children}
             </div>
         </NavDrawerPlus>);

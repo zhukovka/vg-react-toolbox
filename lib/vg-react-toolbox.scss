@@ -4,6 +4,14 @@
 body {
   background: $body-bg;
   color: $body-text-color;
+  & > * {
+    &::-webkit-scrollbar {
+      background: inherit;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: $scrollbar-thumb-color; // rgba(0,0,0,.5);
+    }
+  }
 }
 
 [class*="vg-side-navigation"] {
