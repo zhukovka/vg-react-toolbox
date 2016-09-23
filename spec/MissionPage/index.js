@@ -60,8 +60,20 @@ class MissionPageTest extends Component {
                 <Layout>
                     <UsersPanel open={this.state.usersPanelOpen} onClick={(e)=> {
                             this.setState({usersPanelOpen: !this.state.usersPanelOpen});
-                        }} addUser={()=>console.log('kuku')}>
+                        }} addUser={()=>console.log('kuku')} style={{padding: '10px'}}>
                         <List selectable ripple>
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
+                        <ListCheckbox checked caption='Notify new comics' legend=' published' />
                         <ListCheckbox checked caption='Notify new comics' legend=' published' />
                         <ListCheckbox checked caption='Notify new comics' legend=' published' />
                         <ListCheckbox checked caption='Notify new comics' legend=' published' />
@@ -70,7 +82,6 @@ class MissionPageTest extends Component {
 
                         </List>
                         <Button label='BACK TO ORANIZATION LIST' primary />
-                        <Button label='VIEW ORANIZATION PAGE' primary />
                     </UsersPanel>
                     <PlayerPanel
                         expand={()=>this.setState({sidePanelOpen: !this.state.sidePanelOpen && !this.state.usersPanelOpen, usersPanelOpen: !this.state.sidePanelOpen && !this.state.usersPanelOpen})}>

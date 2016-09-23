@@ -1,1 +1,17 @@
-@import "../node_modules/react-toolbox/lib/commons";
+@import "~react-toolbox/lib/commons";
+@import "config";
+
+body {
+  background: $body-bg;
+  color: $body-text-color;
+}
+
+[class*="vg-side-navigation"] {
+  background: $vg-side-navigation-bg;
+}
+
+td, th, input {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+}

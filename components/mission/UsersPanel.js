@@ -4,11 +4,11 @@ import NavDrawerPlus from 'react-toolbox-addons/lib/nawdrawerplus';
 /**
  * UsersPanel react component
  */
-const UsersPanel = ({children, open, onClick, addUser})=> {
+const UsersPanel = ({children, open, onClick, addUser, style})=> {
     const addUserBtn = {icon: 'person_add', onClick: addUser};
     return (
-        <NavDrawerPlus title="Users" active={open} pinned={open} onClick={onClick} buttons={[addUserBtn]}>
-            <div style={{overflow: 'auto'}}>
+        <NavDrawerPlus title="Users" active={open} pinned={open} onClick={onClick} buttons={[addUserBtn]} className='usersPanel'>
+            <div style={{overflow: 'auto', ...style}}>
               {children}
             </div>
         </NavDrawerPlus>);
@@ -26,6 +26,7 @@ UsersPanel.propTypes = {
     /**
      * <Callback1<DOMEvent>> - onClick callback on close icon click
      */
-    open: PropTypes.bool
+    open: PropTypes.bool,
+    style: PropTypes.object
 };
 export default UsersPanel;

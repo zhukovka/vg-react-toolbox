@@ -12,9 +12,19 @@ class ProfileCard extends Component {
         children: PropTypes.any,
         /**
          * set the Card to edit mode
+         * Boolean editable
+         */
+        editable: PropTypes.bool,
+        /**
+         * set the Card to edit mode
          * Boolean editmode
          */
         editmode: PropTypes.bool,
+        /**
+         * event handler for cancel icon click
+         * Callback1<DOMEvent> onCancel
+         */
+        onCancel: PropTypes.func,
         /**
          * event handler for close icon click
          * Callback1<DOMEvent> onClose
@@ -48,32 +58,50 @@ class ProfileCard extends Component {
          */
         style: PropTypes.object
     };
+    static defaultProps = {
+        editable: true
+    };
 
     constructor (props) {
         super(props);
     }
 
     renderButtons () {
-        const {onEdit, onClose, onConfirm, editmode} = this.props;
-        let buttons = [{
-            icon: 'mode_edit',
-            onClick: (e)=>onEdit(e)
-        }];
+        const {onEdit, onClose, onConfirm, onCancel, editmode, editable} = this.props;
+        let buttons = [];
+        if (editable) {
+            buttons.push({
+                icon: 'mode_edit',
+                onClick: (e)=>onEdit(e)
+            });
+            if (onCancel) {
+                buttons.unshift({
+                    icon: 'not_interested',
+                    onClick: (e)=>onCancel(e)
+                });
+            }
 
-        if (editmode) {
-            buttons = [{
-                icon: 'check',
-                onClick: (e)=>onConfirm(e)
-            }, {
-                icon: 'close',
-                onClick: (e)=>onClose(e)
-            }];
+            if (editmode) {
+                buttons = [{
+                    icon: 'check',
+                    onClick: (e)=>onConfirm(e)
+                }, {
+                    icon: 'close',
+                    onClick: (e)=>onClose(e)
+                }];
+            }
         }
         return (<CardTitleButtons buttons={buttons}/>);
     }
 
     renderChildren (fields, sizes = {small: 12, medium: 6, large: 6}) {
         return fields.map((field, index)=> {
+            if (index === fields.length - 1) {
+                return (
+                    <Col key={`col-${index}`}>
+                        {field}
+                    </Col>);
+            }
             return (
                 <Col key={`col-${index}`} {...sizes}>
                     {field}

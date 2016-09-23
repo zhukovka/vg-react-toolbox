@@ -1,0 +1,16 @@
+@import "config";
+
+.playerPanel.panel {
+  background-color: $panel-bg;
+}
+
+.card.missionBar {
+  background-color: $mission_bar-bg;
+  padding: $mission_bar-padding;
+}
+
+.toggle.missionbar_icon {
+  [data-react-toolbox="font-icon"] {
+    font-size: $mission_bar-icon-size;
+  }
+}

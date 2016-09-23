@@ -8,8 +8,8 @@ module.exports = {
     context: __dirname,
     devtool: 'inline-source-map',
     entry: {
-        // main: ['webpack-hot-middleware/client',
-        //     './spec/index.js'],
+        main: ['webpack-hot-middleware/client',
+            './spec/index.js'],
         mission: ['webpack-hot-middleware/client',
             './spec/mission/index.js'],
         profile: ['webpack-hot-middleware/client',
@@ -42,6 +42,10 @@ module.exports = {
         ]
     },
     postcss: [autoprefixer],
+    sassLoader: {
+        data: '@import "theme/_config_main.scss";',
+        includePaths: [path.resolve(__dirname, './spec')]
+    },
     plugins: [
         new ExtractTextPlugin('[name].css', {allChunks: true}),
         new webpack.HotModuleReplacementPlugin(),
