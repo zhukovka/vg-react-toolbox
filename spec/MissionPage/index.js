@@ -10,7 +10,7 @@ import SidebarPlus from 'react-toolbox-addons/lib/sidebarplus';
 class MissionPageTest extends Component {
     state = {
         sidePanelOpen: true,
-        usersPanelOpen: true,
+        usersPanelOpen: 2,
         sidePanelTitle: 'Map'
     };
 
@@ -36,7 +36,7 @@ class MissionPageTest extends Component {
     render () {
         const missionBarProps = {
             userIconClick: (e)=> {
-                this.setState({usersPanelOpen: !this.state.usersPanelOpen});
+                this.setState({usersPanelOpen: (this.state.usersPanelOpen + 1) % 3});
             },
             weatherClick: (e)=> {
                 if (this.state.sidePanelOpen && this.state.sidePanelTitle !== 'Weather') {
@@ -58,8 +58,8 @@ class MissionPageTest extends Component {
             <div>
                 <MissionBar {...missionBarProps}/>
                 <Layout>
-                    <UsersPanel open={this.state.usersPanelOpen} onClick={(e)=> {
-                            this.setState({usersPanelOpen: !this.state.usersPanelOpen});
+                    <UsersPanel openState={this.state.usersPanelOpen} onClick={(e)=> {
+                            this.setState({usersPanelOpen: (this.state.usersPanelOpen + 1) % 3});
                         }} addUser={()=>console.log('kuku')} style={{padding: '10px'}}>
                         <List selectable ripple>
                         <ListCheckbox checked caption='Notify new comics' legend=' published' />
