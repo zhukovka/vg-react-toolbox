@@ -6,6 +6,7 @@ body {
   color: $body-text-color;
   & *::-webkit-scrollbar {
     background: inherit;
+    width: $scroll-width;
   }
   & *::-webkit-scrollbar-thumb {
     background: $scrollbar-thumb-color; // rgba(0,0,0,.5);

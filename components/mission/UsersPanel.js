@@ -6,13 +6,10 @@ import NavDrawerPlus from 'react-toolbox-addons/lib/nawdrawerplus';
  */
 const UsersPanel = ({children, openState, onClick, addUser, style})=> {
     const addUserBtn = {icon: 'person_add', onClick: addUser};
-    if (openState === 1) {
-        style.overflow = 'auto';
-    }
     return (
         <NavDrawerPlus title="Users" openState={openState} pinned={openState !== 0} onClick={onClick}
                        buttons={[addUserBtn]} className='usersPanel'>
-            <div style={style}>
+            <div style={{overflowY: 'auto', overflowX: 'hidden', ...style}}>
                 {children}
             </div>
         </NavDrawerPlus>);
