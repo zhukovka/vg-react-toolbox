@@ -2,13 +2,13 @@ import React, {PropTypes, Component, Children} from 'react';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
 import {Card, CardText} from 'react-toolbox/lib/card';
 import {CardTitleStyled, CardTitleButtons} from 'react-toolbox-addons/lib/card-addons';
-
 /**
  * ProfileCard
  * see example https://github.com/zhukovka/vg-react-toolbox/blob/master/components/profile/example.md
  */
 class ProfileCard extends Component {
     static propTypes = {
+        actions: PropTypes.element,
         children: PropTypes.any,
         /**
          * set the Card to edit mode
@@ -110,7 +110,7 @@ class ProfileCard extends Component {
     }
 
     render () {
-        const {primary, cols, style} = this.props;
+        const {primary, cols, style, actions} = this.props;
         const size = 12 / (cols || 2);
         const children = Children.toArray(this.props.children);
         const cardStyle = Object.assign({overflow: 'visible'}, style);
@@ -125,9 +125,9 @@ class ProfileCard extends Component {
                         {this.renderChildren(children.slice(1), {small: 12, medium: size, large: size})}
                     </Row>
                 </CardText>
+                {actions}
             </Card>);
     }
-
 
 }
 
