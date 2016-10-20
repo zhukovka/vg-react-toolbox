@@ -21,6 +21,10 @@ class ProfileCard extends Component {
          */
         editmode: PropTypes.bool,
         /**
+         * Boolean hasError
+         */
+        hasError: PropTypes.bool,
+        /**
          * event handler for cancel icon click
          * Callback1<DOMEvent> onCancel
          */
@@ -67,7 +71,7 @@ class ProfileCard extends Component {
     }
 
     renderButtons () {
-        const {onEdit, onClose, onConfirm, onCancel, editmode, editable} = this.props;
+        const {onEdit, onClose, onConfirm, onCancel, editmode, editable, hasError} = this.props;
         let buttons = [];
         if (editable) {
             buttons.push({
@@ -82,13 +86,16 @@ class ProfileCard extends Component {
             }
 
             if (editmode) {
-                buttons = [{
-                    icon: 'check',
-                    onClick: (e)=>onConfirm(e)
-                }, {
+                if (!hasError) {
+                    buttons.push({
+                        icon: 'check',
+                        onClick: (e)=>onConfirm(e)
+                    });
+                }
+                buttons.push({
                     icon: 'close',
                     onClick: (e)=>onClose(e)
-                }];
+                });
             }
         }
         return (<CardTitleButtons buttons={buttons}/>);
