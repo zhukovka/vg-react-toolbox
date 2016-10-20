@@ -86,6 +86,7 @@ class ProfileCard extends Component {
             }
 
             if (editmode) {
+                buttons = [];
                 if (!hasError) {
                     buttons.push({
                         icon: 'check',
