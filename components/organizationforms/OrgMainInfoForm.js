@@ -2,15 +2,13 @@ import React, {PropTypes} from 'react';
 import VGComponentForm from '../vgcomponentform';
 import {CardActionsRight} from 'react-toolbox-addons/lib/cardactionsright';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
-import MainInfo from '../classes/MainInfo';
-import FormActions from '../classes/FormActions';
 import {Upload} from 'react-toolbox-addons/lib/upload-zone';
 
 class OrgMainInfoForm extends VGComponentForm {
     static propTypes = {
-        info: PropTypes.instanceOf(MainInfo),
+        info: PropTypes.object,
         onUpload: PropTypes.func,
-        orgActions: PropTypes.instanceOf(FormActions)
+        orgActions: PropTypes.object
     };
 
     constructor (props) {

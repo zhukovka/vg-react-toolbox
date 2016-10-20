@@ -1,15 +1,12 @@
 import React, {PropTypes} from 'react';
 import VGComponentForm from '../vgcomponentform';
-
 import {Row} from 'react-toolbox-addons/lib/grid';
-import AccountInfo from '../classes/AccountInfo';
-import FormActionsBack from '../classes/FormActionsBack';
 import ActionsBack from '../actions/ActionsBack';
 
 class OrgAccountInfoForm extends VGComponentForm {
     static propTypes = {
-        info: PropTypes.instanceOf(AccountInfo),
-        orgActions: PropTypes.instanceOf(FormActionsBack)
+        info: PropTypes.object,
+        orgActions: PropTypes.object
     };
 
     constructor (props) {
