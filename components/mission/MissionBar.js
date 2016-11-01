@@ -7,11 +7,12 @@ import theme from './theme.scss';
 /**
  * MissionBar react component
  */
-const MissionBar = ({userIconClick, weatherClick, mapClick})=> {
+const MissionBar = ({titleElement, userIconClick, weatherClick, mapClick})=> {
     return (
         <Card className={theme.missionBar} theme={theme}>
             <CardActionsSpaced>
                 <IconButton icon='supervisor_account' className={theme.missionbar_icon} onClick={(e)=>userIconClick(e)} theme={theme}/>
+                {titleElement}
                 <ButtonGroup>
                     <IconButton icon='wb_sunny' className={theme.missionbar_icon} onClick={(e)=>weatherClick(e)} theme={theme}/>
                     <IconButton icon='map' className={theme.missionbar_icon} onClick={(e)=>mapClick(e)} theme={theme}/>
@@ -20,6 +21,10 @@ const MissionBar = ({userIconClick, weatherClick, mapClick})=> {
         </Card>);
 };
 MissionBar.propTypes = {
+    /**
+     * titleElement - ReactElement
+     */
+    titleElement: PropTypes.element,
     /**
      * Callback1<DOMEvent> mapClick - callback on map icon click
      */
