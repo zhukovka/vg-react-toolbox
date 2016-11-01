@@ -35,6 +35,7 @@ class MissionPageTest extends Component {
 
     render () {
         const missionBarProps = {
+            titleElement: (<h4>TITLE</h4>),
             userIconClick: (e)=> {
                 this.setState({usersPanelOpen: (this.state.usersPanelOpen + 1) % 3});
             },
