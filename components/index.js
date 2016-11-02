@@ -14,3 +14,4 @@ export ActionsBack from './actions/ActionsBack';
 export MessageCard from './messagecards/MessageCard';
 export ProfileTitle from './profile/ProfileTitle';
 export ProfileCard from './profile/ProfileCard';
+export AsidePanel from './mission/AsidePanel';
