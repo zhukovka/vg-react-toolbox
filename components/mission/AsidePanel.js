@@ -1,5 +1,4 @@
 import React, {PropTypes} from 'react';
-import NavDrawerPlus from 'react-toolbox-addons/lib/nawdrawerplus';
 import NavDrawerPlusChildren from 'react-toolbox-addons/lib/navdraweplus-children';
 /**
  * AsidePanel react component
