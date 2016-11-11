@@ -1,6 +1,5 @@
 import React, {PropTypes} from 'react';
 import {Button} from 'react-toolbox/lib/button';
-import FormActionsBack from '../classes/FormActionsBack';
 import {CardActionsSpaced} from 'react-toolbox-addons/lib/cardactionsspaced';
 import ButtonGroup from 'react-toolbox-addons/lib/buttongroup/ButtonGroup';
 

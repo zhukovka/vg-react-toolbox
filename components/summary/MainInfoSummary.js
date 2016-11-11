@@ -2,7 +2,6 @@ import React, {PropTypes} from 'react';
 import {Row, Col} from 'react-toolbox-addons/lib/grid';
 import {RedHeading} from 'react-toolbox-addons/lib/headings';
 import Summary from './Summary';
-import MainInfo from '../classes/MainInfo';
 
 /**
  * MainInfoSummary extends Summary
