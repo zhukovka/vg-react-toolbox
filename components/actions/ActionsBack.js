@@ -22,9 +22,9 @@ const ActionsBack = ({actions})=> {
 };
 ActionsBack.propTypes = {
     /**
-     * actions <FormActionsBack>
+     * actions <Object>
      */
-    actions: PropTypes.instanceOf(FormActionsBack)
+    actions: PropTypes.object
 };
 
 export default ActionsBack;

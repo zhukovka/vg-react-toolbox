@@ -175,7 +175,7 @@ class VGComponentForm extends Component {
             <Col key={`col-${_input.key}`} {...sizes}>
                 <Input
                     onChange={(val)=>this.setState({[key]: val}, ()=>onChange(val))}
-                    value={this.state[key]}
+                    value={this.state[key] || ""}
                     {...other}
                 />
             </Col>

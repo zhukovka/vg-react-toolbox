@@ -10,9 +10,9 @@ import MainInfo from '../classes/MainInfo';
 class MainInfoSummary extends Summary {
     static propTypes = {
         /**
-         * <MainInfo> info
+         * <array> info
          */
-        info: PropTypes.instanceOf(MainInfo),
+        info: PropTypes.array,
         /**
          * <String> title
          */
