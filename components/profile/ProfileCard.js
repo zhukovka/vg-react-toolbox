@@ -20,6 +20,7 @@ class ProfileCard extends Component {
          * Boolean editmode
          */
         editmode: PropTypes.bool,
+        id: PropTypes.string,
         /**
          * Boolean hasError
          */
@@ -118,12 +119,12 @@ class ProfileCard extends Component {
     }
 
     render () {
-        const {primary, cols, style, actions} = this.props;
+        const {primary, cols, style, actions, id} = this.props;
         const size = 12 / (cols || 2);
         const children = Children.toArray(this.props.children);
         const cardStyle = Object.assign({overflow: 'visible'}, style);
         return (
-            <Card style={cardStyle}>
+            <Card style={cardStyle} id={id}>
                 <CardTitleStyled primary={primary}>
                     {this.renderButtons()}
                     {children[0]}
