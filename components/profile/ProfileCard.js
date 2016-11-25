@@ -88,16 +88,18 @@ class ProfileCard extends Component {
 
             if (editmode) {
                 buttons = [];
-                if (!hasError) {
+                if (!hasError && onConfirm) {
                     buttons.push({
                         icon: 'check',
                         onClick: (e)=>onConfirm(e)
                     });
                 }
-                buttons.push({
-                    icon: 'close',
-                    onClick: (e)=>onClose(e)
-                });
+                if (onClose) {
+                    buttons.push({
+                        icon: 'close',
+                        onClick: (e)=>onClose(e)
+                    });
+                }
             }
         }
         return (<CardTitleButtons buttons={buttons}/>);
