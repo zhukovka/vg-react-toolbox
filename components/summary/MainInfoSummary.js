@@ -44,9 +44,9 @@ class MainInfoSummary extends Summary {
                     {this.renderFields({street, city})}
                 </Row>
                 <Row expanded>
-                    {this.renderField(state, {small: 6, medium: 4, large: 4})}
-                    {this.renderField(postcode, {small: 6, medium: 2, large: 2})}
-                    {this.renderField(country)}
+                    {this.renderField(state, {small: 8, medium: 3, large: 3})}
+                    {this.renderField(postcode, {small: 4, medium: 3, large: 3})}
+                    {this.renderField(country, {small: 12, medium: 6, large: 6})}
                 </Row>
             </div>
         );
