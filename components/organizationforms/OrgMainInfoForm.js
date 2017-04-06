@@ -7,8 +7,7 @@ import {Upload} from 'react-toolbox-addons/lib/upload-zone';
 class OrgMainInfoForm extends VGComponentForm {
     static propTypes = {
         info: PropTypes.object,
-        onCompanyLogoUpload: PropTypes.func,
-        onPlayerOverlayUpload: PropTypes.func,
+        onUpload: PropTypes.func,
         orgActions: PropTypes.object
     };
 
@@ -21,21 +20,11 @@ class OrgMainInfoForm extends VGComponentForm {
     }
 
     renderFormContent () {
-        const paragraphStyle = {textAlign: 'center'};
         const {info, orgActions} = this.props;
         const {street, city, state, postcode, country} = info.address;
         return (
             <fieldset>
-                <Row expanded>
-                    <Col small={12} medium={6} large={6}>
-                        <p style={paragraphStyle}>Company logo</p>
-                        <Upload onUpload={this.props.onCompanyLogoUpload}/>
-                    </Col>
-                    <Col small={12} medium={6} large={6}>
-                        <p style={paragraphStyle}>Player overlay</p>
-                        <Upload onUpload={this.props.onPlayerOverlayUpload}/>
-                    </Col>
-                </Row>
+                <Upload onUpload={this.props.onUpload} />
                 <Row expanded>
                     {this.renderInputs([info.name, info.id])}
                 </Row>
