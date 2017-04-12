@@ -8,10 +8,14 @@ import theme from './theme.scss';
 const PlayerPanel = ({children, expand, fullscreen, ...other})=> {
     const video = Array.isArray(children) ? children[0] : children;
     const _children = Array.isArray(children) ? children.slice(1) : null;
+    const btns = [{icon: 'view_array', inverse: true, onClick: (e)=>expand(e)}];
+    if (fullscreen) {
+        btns.push({icon: 'fullscreen', inverse: true, onClick: (e)=>fullscreen(e)});
+    }
     return (
         <Panel className={theme.playerPanel} theme={theme}>
             <VideoPanel
-                buttons={[{icon: 'view_array', inverse: true, onClick: (e)=>expand(e)}, {icon: 'fullscreen', inverse: true, onClick: (e)=>fullscreen(e)}]} {...other}>
+                buttons={btns} {...other}>
                 {video}
             </VideoPanel>
             {_children}
