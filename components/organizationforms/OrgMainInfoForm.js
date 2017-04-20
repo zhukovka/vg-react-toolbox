@@ -8,7 +8,18 @@ class OrgMainInfoForm extends VGComponentForm {
     static propTypes = {
         info: PropTypes.object,
         onUpload: PropTypes.func,
-        orgActions: PropTypes.object
+        orgActions: PropTypes.object,
+        uploadType: PropTypes.string.isRequired,
+        requirements: PropTypes.shape({
+            min: PropTypes.objectOf({
+                width: PropTypes.number.isRequired,
+                height: PropTypes.number.isRequired
+            }),
+            max: PropTypes.objectOf({
+                width: PropTypes.number.isRequired,
+                height: PropTypes.number.isRequired
+            })
+        })
     };
 
     constructor (props) {
@@ -20,11 +31,11 @@ class OrgMainInfoForm extends VGComponentForm {
     }
 
     renderFormContent () {
-        const {info, orgActions} = this.props;
+        const {info, orgActions, uploadType, requirements} = this.props;
         const {street, city, state, postcode, country} = info.address;
         return (
             <fieldset>
-                <Upload onUpload={this.props.onUpload} />
+                <Upload onUpload={this.props.onUpload} uploadType={uploadType} requirements={requirements}/>
                 <Row expanded>
                     {this.renderInputs([info.name, info.id])}
                 </Row>
