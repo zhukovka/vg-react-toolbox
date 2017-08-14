@@ -26,6 +26,11 @@ class ProfileCard extends Component {
          */
         hasError: PropTypes.bool,
         /**
+         * event handler for delete icon click
+         * Callback1<DOMEvent> onDelete
+         */
+        onDelete: PropTypes.func,
+        /**
          * event handler for cancel icon click
          * Callback1<DOMEvent> onCancel
          */
@@ -72,8 +77,16 @@ class ProfileCard extends Component {
     }
 
     renderButtons () {
-        const {onEdit, onClose, onConfirm, onCancel, editmode, editable, hasError} = this.props;
+        const {onEdit, onClose, onConfirm, onCancel, onDelete, editmode, editable, hasError} = this.props;
         let buttons = [];
+
+        if (onDelete) {
+            buttons.unshift({
+                icon: 'delete',
+                onClick: (e)=>onDelete(e)
+            });
+        }
+
         if (editable) {
             buttons.push({
                 icon: 'mode_edit',
@@ -85,7 +98,6 @@ class ProfileCard extends Component {
                     onClick: (e)=>onCancel(e)
                 });
             }
-
             if (editmode) {
                 buttons = [];
                 if (!hasError && onConfirm) {
