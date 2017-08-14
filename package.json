@@ -2,7 +2,7 @@
   "name": "vg-react-toolbox",
   "description": "react toolbox components for VG",
   "homepage": "https://github.com/zhukovka/vg-react-toolbox#readme",
-  "version": "1.0.103",
+  "version": "1.0.104",
   "main": "./lib",
   "author": "",
   "repository": {
